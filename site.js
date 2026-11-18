@@ -28,13 +28,17 @@
     document.body.classList.add("has-side");
     var side = document.createElement("aside"); side.className = "side";
     var h = '<a href="' + base + '"' + (here === new URL(base).pathname ? ' class="on"' : "") + '>Overview</a>';
+    var open = {}; try { open = JSON.parse(localStorage.getItem("t9k-open") || "{}"); } catch (e) {}
     NAV.forEach(function (g) {
-      h += "<h4>" + g.group + "</h4>";
+      var cur = g.items.some(function (it) { return location.pathname.endsWith("/tools/" + it[0] + ".html"); });
+      var isOpen = cur || open[g.group] === true;
+      h += '<section class="grp' + (isOpen ? " open" : "") + '" data-g="' + g.group + '"><button class="gh" aria-expanded="' + isOpen + '">' + g.group + "</button><div class=\"gb\">";
       g.items.forEach(function (it) {
         var u = url(it[0]);
         h += '<a href="' + u + '" data-t="' + it[1].toLowerCase() + " " + (it[2] || "").toLowerCase() + '"' +
           (location.pathname.endsWith("/tools/" + it[0] + ".html") ? ' class="on"' : "") + ">" + it[1] + "</a>";
       });
+      h += "</div></section>";
     });
     side.innerHTML = h;
     var lay = document.createElement("div"); lay.className = "layout";
@@ -61,6 +65,10 @@
       var nx = cur === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", nx);
       try { localStorage.setItem("t9k-theme", nx); } catch (x) {}
+    } else if (e.target.classList && e.target.classList.contains("gh")) {
+      var sec = e.target.parentNode, o = sec.classList.toggle("open");
+      e.target.setAttribute("aria-expanded", o);
+      var st = {}; try { st = JSON.parse(localStorage.getItem("t9k-open") || "{}"); st[sec.dataset.g] = o; localStorage.setItem("t9k-open", JSON.stringify(st)); } catch (x) {}
     } else if (e.target.id === "menu") document.body.classList.toggle("menu-open");
     else if (e.target.closest && e.target.closest("aside.side a")) document.body.classList.remove("menu-open");
   });
@@ -70,10 +78,10 @@
     document.querySelectorAll("aside.side a[data-t]").forEach(function (a) {
       a.classList.toggle("hide", q && a.dataset.t.indexOf(q) < 0);
     });
-    document.querySelectorAll("aside.side h4").forEach(function (h4) {
-      var n = h4.nextElementSibling, any = false;
-      while (n && n.tagName === "A") { if (!n.classList.contains("hide")) any = true; n = n.nextElementSibling; }
-      h4.style.display = any ? "" : "none";
+    document.querySelectorAll("aside.side .grp").forEach(function (g) {
+      var any = g.querySelector("a:not(.hide)") !== null;
+      g.style.display = any ? "" : "none";
+      if (q) g.classList.toggle("open", any);
     });
     document.body.classList.add("menu-open");
   });

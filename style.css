@@ -34,6 +34,12 @@ header.site nav a:hover{color:var(--fg)}
 /* layout */
 .layout{display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);max-width:1400px;margin:0 auto}
 aside.side{position:sticky;top:var(--top-h);align-self:start;height:calc(100vh - var(--top-h));overflow:auto;padding:20px 12px 40px 20px;border-right:1px solid var(--line);font-size:.93rem}
+aside.side .gh{display:flex;align-items:center;justify-content:space-between;width:100%;margin:2px 0;padding:8px 10px;border:0;border-radius:8px;background:none;color:var(--mute);font:700 .72rem/1 inherit;font-family:inherit;text-transform:uppercase;letter-spacing:.09em;cursor:pointer;text-align:left}
+aside.side .gh:hover{background:var(--bg2);color:var(--fg)}
+aside.side .gh::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+aside.side .grp.open>.gh::after{transform:rotate(45deg)}
+aside.side .gb{display:none;margin:0 0 6px 6px;padding-left:6px;border-left:1px solid var(--line)}
+aside.side .grp.open>.gb{display:block}
 aside.side h4{margin:18px 10px 6px;font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--mute);font-weight:700}
 aside.side h4:first-child{margin-top:0}
 aside.side a{display:block;padding:6px 10px;border-radius:8px;color:var(--fg);text-decoration:none}
