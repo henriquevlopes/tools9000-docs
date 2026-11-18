@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Symmetry 9000 - Tools9000 docs</title>
+<meta name="description" content="Symmetry 9000: a live mirror or radial repeat modifier for Editable Poly and Edit Poly.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Symmetry 9000</div>
+<h1>Symmetry 9000</h1>
+<p class="lead">A live mirror modifier, a drop-in replacement for Max's Symmetry.</p>
+
+<h2>What it does</h2>
+<p>Symmetry 9000 is a modifier that mirrors geometry across a plane, or repeats it round an axis. It replaces Max's own Symmetry modifier and adds control over which faces are mirrored and how smoothing, materials and UVs come out. Add it from the modifier list, or use the <a href="mirror.html">Mirror</a> tool, which adds it for you already set up.</p>
+<figure><img src="../img/symmetry_panel.png" alt="Symmetry 9000 modifier panel in Planar mode" width="162" height="378"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select an object and add <strong>Symmetry 9000</strong> from the modifier list (category 9000 Toolkit), or use the <a href="mirror.html">Mirror</a> tool.</li>
+<li>Choose Planar or Radial at the top of the panel.</li>
+<li>Switch on an axis (X, Y or Z). Edit the source side and the other side follows.</li>
+<li>To move the mirror plane, use the <strong>Mirror</strong> sub-object level and move or rotate the gizmo, or use the buttons in the panel.</li>
+</ol>
+
+<h2>Options</h2>
+<h3>Symmetry rollout</h3>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Planar / Radial</td><td>Planar mirrors across a plane. Radial repeats the geometry round an axis.</td></tr>
+<tr><td>X, Y, Z</td><td>Switch on one or more axes. More than one gives 4-way or 8-way symmetry. Each axis has a <strong>Flip</strong> box to mirror the other way.</td></tr>
+<tr><td>Radial: Count</td><td>How many copies go round the axis.</td></tr>
+<tr><td>Radial: Mirror Symmetry / Flip</td><td>Also mirrors each copy, so you model a half wedge and get a full symmetric repeat.</td></tr>
+<tr><td>Align to Face</td><td>Click a face in the viewport and the mirror plane snaps to it. The small button beside it resets the plane.</td></tr>
+<tr><td>Pivot / Middle</td><td>Puts the centre on the object's pivot, or on the middle of its bounding box.<!-- CHECK: Middle = bounding box centre --></td></tr>
+<tr><td>Pick Object</td><td>Click another object to use its pivot as the centre. The mirror follows it when it moves.</td></tr>
+<tr><td>Follow Rotation</td><td>With Pick Object, the plane also follows the other object's rotation.</td></tr>
+<tr><td>Slice Along Mirror</td><td>Cuts the mesh along the mirror plane. Has its own Threshold.</td></tr>
+<tr><td>Weld Seam</td><td>Welds the vertices on the seam. Has its own Threshold.</td></tr>
+<tr><td>Use Proximity Weld</td><td>Welds nearby vertices of the two sides.</td></tr>
+</table>
+<h3>Selection rollout</h3>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>All</td><td>Mirrors the whole mesh (default).</td></tr>
+<tr><td>Selected Faces</td><td>Mirrors only the selected faces.</td></tr>
+<tr><td>Material ID</td><td>Mirrors only faces with the Mat ID you set. Useful when a few parts must never be copied.</td></tr>
+<tr><td>Tag Mirrored Faces</td><td>Gives the mirrored faces a material ID of your choice (New ID).</td></tr>
+</table>
+<h3>Advanced rollout</h3>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Keep hard edges</td><td>Keeps the hard edges you marked on the centre line.</td></tr>
+<tr><td>Offset Mirror UVs</td><td>Moves the mirrored side's UVs one tile over in U, so the two sides do not overlap.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>Smoothing groups and hard edges come out the same on both sides, including FBX imports with locked normals.</li>
+<li>An object whose mirror plane follows another object can be used as a Boolean operand.</li>
+<li>Slice and Weld work in both Planar and Radial mode.</li>
+<li>Scenes made with Symmetry 9000 earlier open as they were.<!-- CHECK: scene compatibility, from the note that class and id are unchanged --></li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smoothing - Tools9000 docs</title>
+<meta name="description" content="Smoothing panel: see smoothing groups in colour and rebuild them with the fewest groups.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Smoothing</div>
+<h1>Smoothing</h1>
+<p class="lead">See smoothing groups as colours, and rebuild them with as few groups as possible.</p>
+
+<h2>What it does</h2>
+<p>The Smoothing panel is a small floating window with two buttons. <strong>Colors</strong> shows every smoothing group of the selected objects in its own colour. <strong>Optimize</strong> rebuilds the smoothing groups with the fewest groups, keeping every hard and soft edge exactly as it was.</p>
+<figure><img src="../img/smoothing_panel.png" alt="The Smoothing panel with the Colors and Optimize buttons" width="166" height="137"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Run the <strong>Smoothing</strong> macro (category 9000 Toolkit, <kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd> by default). The panel opens where you left it. Run it again to close it. <!-- CHECK: default hotkey from the deploy list --></li>
+<li>Select one or more objects (Editable Poly or Edit Poly).</li>
+<li>Click <strong>Colors</strong> to see the groups. Click it again to go back to how the objects looked before.</li>
+<li>Click <strong>Optimize</strong> to reduce the number of groups. At polygon or element level only the selected polygons are changed.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Button</th><th>What it does</th></tr>
+<tr><td>Colors</td><td>Paints one colour per smoothing group on the selected objects. The button shows whether the current selection is showing colours. The colours update as you edit, including with hard-edge changes, Edge Marks and Max's own Edit Poly tools.</td></tr>
+<tr><td>Optimize</td><td>Keeps every hard and soft edge and rebuilds the groups with the fewest possible. It never ends up with more groups than the object had. A message in the panel tells you the result.</td></tr>
+</table>
+
+<h2>Make Hard and hard edges</h2>
+<p>The Edge Marks pie sets hard edges, creases and edge weights on the selected edges. At polygon level, <strong>Make Hard</strong> turns the outline of the selection into a hard edge using one clean smoothing group that no neighbour uses, so groups do not pile up. <strong>Hard per Face</strong> gives each polygon its own group. Both are a single undo step. <!-- CHECK: Edge Marks may have its own page; link or trim if so --></p>
+<p>Hard edges are also what <strong>Hard edges from seams</strong> in the UV Toolbar creates: a hard edge on every UV seam, handy before baking.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Turning Colors on or off is one undo step. The colours are removed before you save, so the .max file never keeps them.</li>
+<li>With modifiers on the stack that change the polygons (Symmetry 9000, TurboSmooth and similar), a small modifier called SG Colors 9000 goes on top of the stack while Colors is on and paints the groups of the final result. It follows your edits, stays on top when you add modifiers, and disappears when you turn Colors off. It needs the SG Colors 9000 plugin loaded (restart Max once after installing). Without it a message in the panel says so.</li>
+<li>Optimize works on old meshes where polygons carry several groups, and rebuilds areas from their hard edges where that gives fewer groups.</li>
+<li>Optimize and Colors work on an object whose own vertex colours are in use: they never touch them.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

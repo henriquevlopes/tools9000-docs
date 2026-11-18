@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc - Tools9000 docs</title>
+<meta name="description" content="Arc: turn selected edge rows into an arc, live.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Arc</div>
+<h1>Arc</h1>
+<p class="lead">Bend a selected row into an arc between its ends.</p>
+
+<h2>What it does</h2>
+<p>Arc bends the selected row of vertices or edges into a circular arc between its two ends. You set how far it bends with an angle.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the vertices, edges or borders you want to change (a row of them).</li>
+<li>In the right-click menu, choose <strong>Arc</strong> (it is in the group with Connect). It only shows at vertex, edge and border level.</li>
+<li>Use the mouse wheel or <kbd>+</kbd> / <kbd>-</kbd> to change the angle (5 degrees a step), or type a number.</li>
+<li>Click, <kbd>Enter</kbd> or <kbd>Space</kbd> keeps it. Right-click or <kbd>Esc</kbd> cancels.</li>
+</ol>
+<figure><img src="../img/arc_guide.png" alt="The Arc box showing the Angle value and the Flip option" width="322" height="124"></figure>
+
+<h2>Options</h2>
+<table>
+<tr><th>Key</th><th>Option</th><th>What it does</th></tr>
+<tr><td><kbd>F</kbd></td><td>Flip</td><td>Bends the arc the other way.</td></tr>
+</table>
+<p>Ctrl + wheel changes the angle by 1 degree. The viewport can still be moved while the tool runs: middle mouse pans, <kbd>Alt</kbd>+middle orbits, the wheel zooms.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Closed rows and rows that are too short are skipped, and the box tells you how many.</li>
+<li>Only the positions of vertices change.</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

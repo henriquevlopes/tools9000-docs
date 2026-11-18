@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reference Images - Tools9000 docs</title>
+<meta name="description" content="Reference Images: drop pictures in as planes and scale them to your model.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Reference Images</div>
+<h1>Reference Images</h1>
+<p class="lead">Drop concept images into the scene as planes and scale them to your model.</p>
+
+<h2>What it does</h2>
+<p>Each image you add becomes a plane showing the picture (unlit, visible from both sides). All planes have the same height and stand in a row facing the view you are in (front, side or top), on a layer called References.</p>
+<figure><img src="../img/references_window.png" alt="Reference Images window with Add Images and Scale to Size sections" width="270" height="346"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Open <strong>Reference Images</strong> (9000 Toolkit category).</li>
+<li>Drop image files on the drop zone, press <strong>Browse...</strong>, or press <strong>Paste</strong> to use a picture copied to the clipboard. Set <strong>Plane Height</strong> first if you want a different size.</li>
+<li>To scale a reference to a real size, press <strong>Pick 2 Points...</strong>, click two points on the reference, then type the distance they should have.</li>
+<li>Or press <strong>Match to Model...</strong>: click two points on the reference, then the same two points on your model. The reference is scaled and moved in its own plane so they line up.</li>
+</ol>
+
+<h2>Options</h2>
+<p>The Advanced section sets how new planes behave. Your choices are remembered.</p>
+<figure><img src="../img/references_window_advanced.png" alt="Window with the Advanced section open" width="270" height="433"></figure>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Backface Cull</td><td>Hides the back of the plane. On by default.</td></tr>
+<tr><td>Ignore Extents</td><td>Zoom Extents skips the planes. On by default.</td></tr>
+<tr><td>Freeze</td><td>Freezes the planes so you cannot select them by accident. On by default.</td></tr>
+<tr><td>Show Frozen in Gray</td><td>Shows frozen planes grey instead of with their picture. Off by default.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>Adding images is one undo step.</li>
+<li>Snaps work when you pick points.</li>
+<li>Pick 2 Points asks for the distance after you click, starting from the distance the points have now. Enter or OK scales; Cancel changes nothing.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

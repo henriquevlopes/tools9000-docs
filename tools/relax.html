@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Relax - Tools9000 docs</title>
+<meta name="description" content="Relax: smooths a jagged edge loop without flattening its overall shape.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / <a href="looptools.html">LoopTools</a> / Relax</div>
+<h1>Relax</h1>
+<p class="lead">Smooths a jagged loop.</p>
+
+<h2>What it does</h2>
+<p>Relax evens out a bumpy loop by pulling each vertex towards its neighbours, while keeping the general shape of the loop.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Open an Editable Poly (or an Edit Poly modifier) in the Modify panel and go to a sub-object level. Select a loop of edges.</li>
+<li>Right-click in the viewport and choose <strong>LoopTools9000</strong>, then the tool. The submenu is the first item in the lower-left part of the menu, and only shows at sub-object level.</li>
+<li>The tool runs at once with the settings you used last, and a settings box opens in the viewport. Change a setting and the result updates live.</li>
+<li>Press <strong>OK</strong> to keep it, <strong>Cancel</strong> to go back to the original shape, or <strong>Apply</strong> to keep it and run the tool again on top of the result.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Interpolation</td><td>Cubic follows a smooth curve. Linear keeps the vertices on the existing edges.</td></tr>
+<tr><td>Input</td><td><strong>Parallel (all)</strong> also relaxes every loop parallel to the selection. <strong>Selection</strong> only relaxes what you selected.</td></tr>
+<tr><td>Iterations</td><td>How many times it repeats: 1, 3, 5, 10 or 25.</td></tr>
+<tr><td>Regular</td><td>Spaces the vertices evenly while relaxing (on by default).<!-- CHECK: meaning of Regular in Relax --></td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>More iterations smooth more.</li>
+<li>The preview updates quickly as you change a setting.</li>
+<li>Keeping the result is one undo step.</li>
+<li>Your settings are remembered for next time.</li>
+<li>It works on Editable Poly and on the Edit Poly modifier.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

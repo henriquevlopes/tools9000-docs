@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flatten - Tools9000 docs</title>
+<meta name="description" content="Flatten: flatten the selection onto a plane, with locking and options, from the Align pie.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Flatten</div>
+<h1>Flatten</h1>
+<p class="lead">Make selected vertices, edges or polygons flat.</p>
+
+<h2>What it does</h2>
+<p>Flatten makes the selected vertices, edges or polygons flat. The flattening is applied at once and stays a preview while you use the options. It lives in the Align pie.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select vertices, edges or polygons of an Editable Poly or Edit Poly.</li>
+<li>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> for the Align pie and choose <strong>Flatten</strong> (top-left). <!-- CHECK: hotkey is the default; users may have changed it --></li>
+<li>Use the keys below to lock vertices or change how it flattens.</li>
+<li><kbd>Enter</kbd> or <kbd>Space</kbd> keeps it. Right-click or <kbd>Esc</kbd> cancels.</li>
+</ol>
+<figure><img src="../img/flatten_guide.png" alt="The Flatten box listing the options and their keys" width="519" height="160"></figure>
+
+<h2>Options</h2>
+<table>
+<tr><th>Key</th><th>Option</th><th>What it does</th></tr>
+<tr><td><kbd>B</kbd></td><td>Pick vertices / edges to lock</td><td>Click a vertex or an edge to lock or unlock it. Locked vertices stay put; the rest flattens around them.</td></tr>
+<tr><td><kbd>S</kbd></td><td>By Sharp Edges</td><td>Each group of polygons between hard edges gets its own plane.</td></tr>
+<tr><td><kbd>F</kbd></td><td>Each Face</td><td>Every polygon goes flat on its own plane while the overall shape is kept.</td></tr>
+<tr><td><kbd>E</kbd></td><td>Space Evenly</td><td>Spreads the vertices of a row at equal distances.</td></tr>
+<tr><td><kbd>X</kbd><kbd>Y</kbd><kbd>Z</kbd></td><td>Keep axis</td><td>Moves vertices only on the other axes. <!-- CHECK: X Y Z row is in the screenshot, not in the code I read --></td></tr>
+</table>
+<p>The viewport can still be moved while the tool runs: middle mouse pans, <kbd>Alt</kbd>+middle orbits, the wheel zooms.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Locked vertices are drawn green and the one under the mouse yellow while you pick.</li>
+<li>It also works on a row of UV edges in the Unwrap UVW editor, and on spline knots (a row of knots goes straight between its ends).</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

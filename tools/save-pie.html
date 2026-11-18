@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Save Pie - Tools9000 docs</title>
+<meta name="description" content="Save pie: open, save, save as, merge, incremental save, import and export.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Save Pie</div>
+<h1>Save Pie</h1>
+<p class="lead">Open, save, merge, import and export from a pie on Ctrl+S.</p>
+
+<h2>What it does</h2>
+<p>The Save pie puts the file actions in one pie. <kbd>Ctrl</kbd>+<kbd>S</kbd> no longer saves straight away: Save is a flick to the right.</p>
+<figure>
+<img src="../img/save_pie.png" alt="The Save pie with Merge, Import, Export, Open, Save, New, Incremental Save and Save As" width="470" height="308">
+<figcaption>The Save pie.</figcaption>
+</figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Press <kbd>Ctrl</kbd>+<kbd>S</kbd>. A pie menu opens around the mouse. Hold the key, flick the mouse toward a button and let go to run it. You can also click a button. <kbd>Esc</kbd>, a right-click or a click in the centre closes the pie. If you let go of the key without moving, the pie stays open for a click.</li>
+<li>For Import and Export, click the format button on the row (OBJ or FBX).</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Button</th><th>What it does</th></tr>
+<tr><td>Merge...</td><td>Max's Merge: pick a .max file, then the objects to bring in.</td></tr>
+<tr><td>Open...</td><td>Opens a scene file.</td></tr>
+<tr><td>Save</td><td>Saves the scene. A star after the name means there are unsaved changes.</td></tr>
+<tr><td>Save As...</td><td>Saves the scene under a new name.</td></tr>
+<tr><td>New</td><td>Starts a new scene; asks to save unsaved changes.</td></tr>
+<tr><td>Incremental Save</td><td>Saves a numbered copy (chair_004 becomes chair_005). Hold <kbd>Alt</kbd> for chair_004_01. It never overwrites a file.</td></tr>
+<tr><td>Import OBJ / FBX</td><td>Imports a file of that format.</td></tr>
+<tr><td>Export OBJ / FBX</td><td>Exports the selected objects, or the visible objects when nothing is selected (hidden objects and objects on hidden layers stay out).</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>Hover Incremental Save to see the file name it will use.</li>
+<li>A USD button appears too when Max has USD import or export available.<!-- CHECK: USD listed in code, availability depends on Max install --></li>
+<li>Max's own Save File is taken off <kbd>Ctrl</kbd>+<kbd>S</kbd>; Save is in the pie and Max's File menu still has it.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

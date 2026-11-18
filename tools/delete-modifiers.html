@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Delete Modifiers - Tools9000 docs</title>
+<meta name="description" content="Delete Modifiers: remove modifiers by name from all selected objects.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Delete Modifiers</div>
+<h1>Delete Modifiers</h1>
+<p class="lead">List every modifier on your selection and delete the ones you pick from all objects at once.</p>
+
+<h2>What it does</h2>
+<p>A small window lists every modifier found on the selected objects, with the number of objects that carry it, for example <em>Bend (1)</em>. Deleting an entry removes every modifier of that name from every selected object.</p>
+<figure><img src="../img/delete_modifiers.png" alt="Delete Modifiers window listing Bend, Shell, TurboSmooth and Unwrap UVW" width="236" height="283"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the objects.</li>
+<li>Open <strong>Delete Modifiers</strong> (9000 Toolkit category). <!-- CHECK: it also keeps the old quad menu entry of the same name if you had one --></li>
+<li>Pick one or more lines in the list and press <strong>Delete</strong>, or double-click a line to delete just that one.</li>
+<li><strong>Delete All</strong> removes every modifier in the list.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Control</th><th>What it does</th></tr>
+<tr><td>Delete</td><td>Deletes the picked modifiers from all selected objects.</td></tr>
+<tr><td>Delete All</td><td>Deletes every listed modifier.</td></tr>
+<tr><td>Double-click a line</td><td>Deletes just that modifier.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>The window stays open and refreshes itself when you change the selection or the stack.</li>
+<li>Modifiers are matched by name, so two different modifiers you renamed the same count as one.</li>
+<li>Each deletion is one undo step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

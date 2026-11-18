@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smart Create - Tools9000 docs</title>
+<meta name="description" content="Smart Create: connect, cap, bridge or create, depending on level and selection.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Smart Create</div>
+<h1>Smart Create</h1>
+<p class="lead">One key that creates the right thing for your selection.</p>
+
+<h2>What it does</h2>
+<p>Smart Create does the obvious "make something here" operation for the sub-object level and selection you have, on an Editable Poly or Edit Poly.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Go to a sub-object level of an Editable Poly or Edit Poly and select something.</li>
+<li>Press <kbd>Space</kbd>. <!-- CHECK: default hotkey; guest installs may skip it --></li>
+<li>The matching operation runs as one undo step.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Level and selection</th><th>What happens</th></tr>
+<tr><td>Vertices</td><td>Connects the selected vertices.</td></tr>
+<tr><td>Nothing selected at edge level</td><td>Turns on the Create Edge mode.</td></tr>
+<tr><td>One edge</td><td>Splits it in the middle and selects the new vertex.</td></tr>
+<tr><td>Two edges that share a vertex</td><td>Makes a polygon from the corner, facing the same way as its neighbours.</td></tr>
+<tr><td>Other edges</td><td>Bridges them; if that makes nothing, connects them.</td></tr>
+<tr><td>Border</td><td>Caps the hole.</td></tr>
+<tr><td>Fewer than two polygons</td><td>Turns on the Create Polygon mode.</td></tr>
+<tr><td>Two or more polygons</td><td>Bridges them.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>It works with several objects selected.</li>
+<li>You can also run it from the 9000 Toolkit category.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

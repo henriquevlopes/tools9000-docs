@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Installation and setup - Tools9000 docs</title>
+<meta name="description" content="Installation and setup: install Tools9000 with the .mzp and choose your tools and hotkeys.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Installation and setup</div>
+<h1>Installation and setup</h1>
+<p class="lead">Drop one file on a viewport, tick the tools you want and restart Max.</p>
+
+<h2>What it does</h2>
+<p>The installer (<code>Tools9000_Install.mzp</code>) opens a setup dialog. You tick the tools you want and the hotkeys to go with them. Only the ticked tools are installed. Tools9000 is made for 3ds Max 2024 for now.</p>
+<figure>
+<img src="../img/setup_dialog.png" alt="Tools9000 setup dialog with tool groups on the left and hotkeys on the right" width="1180" height="939">
+<figcaption>The setup dialog.</figcaption>
+</figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Start 3ds Max 2024.</li>
+<li>Drag <code>Tools9000_Install.mzp</code> onto a viewport.</li>
+<li>On the left, tick the tools you want. They are grouped as Pies, Modelling, UVs and Scene. <strong>All</strong> and <strong>None</strong> tick or clear everything.</li>
+<li>On the right, tick the hotkeys you want. A key you already use for something of your own starts unticked, with a note saying what it does now. Tick it only if you want to hand it over.</li>
+<li>If the UV toolbar is ticked and numpy is missing, a checkbox offers to download it. Pack, Unwrap and Optimize need it. <!-- CHECK: needs internet; wording taken from the code --></li>
+<li>Press <strong>Install</strong>, then restart Max when the dialog says so.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Where</th><th>What you find</th></tr>
+<tr><td>9000 Toolkit category</td><td>Every installed tool is a macro in Customize &gt; Customize User Interface (Toolbars, Quads, Menus, Hotkey Editor), category 9000 Toolkit. You can bind any of them to a key or put it on a toolbar.</td></tr>
+<tr><td>Right-click (quad) menu</td><td>Some tools add an item right after Max's own: Knife Project after Cut, Inset 9000 after Inset, De-chamfer after Chamfer, Extend Borders after Extrude, Triangulate after Convert To, and Check N-gons after Rebuild Mesh. Max's own items stay.</td></tr>
+<tr><td>Scripts part of the quad menu</td><td>Several script-style tools sit here, for example Rebuild Mesh, Mirror and SplinePatch. <!-- CHECK: the brief says "Q menu"; the code only shows the right-click quad menus, confirm which is meant --></td></tr>
+<tr><td>Hotkeys</td><td>The right-hand list of the setup dialog. Tab, Shift+E, Ctrl+Shift+D and Ctrl+S open the pies, <kbd>3</kbd> is Clean Up, X is Remover, M is Merge, and so on.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>Run the installer again any time. It shows what is installed; ticking adds a tool and unticking removes it, with its macros and hotkeys.</li>
+<li>If you untick a hotkey you had handed over, your own binding is put back.</li>
+<li>Restart Max after installing tools that bring a plugin (Mirror, LoopTools, Spiral). Max keeps loaded plugins locked, so they appear after a restart. <!-- CHECK: whether all other tools work immediately without a restart --></li>
+<li>Only Max 2024 is supported for now; other versions are planned later.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

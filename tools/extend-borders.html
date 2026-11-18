@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Extend Borders - Tools9000 docs</title>
+<meta name="description" content="Extend Borders: grow rows of polygons from the selected open edges of an Editable Poly.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Extend Borders</div>
+<h1>Extend Borders</h1>
+<p class="lead">Grow a new row of polygons outward from open edges.</p>
+
+<h2>What it does</h2>
+<p>Extend Borders takes the selected open (border) edges of an Editable Poly and grows a row of new polygons outward from them. You choose how far it goes and which way it bends.</p>
+<figure><img src="../img/extend_borders.png" alt="The Extend Borders window with Depth, Angle and three options" width="252" height="173"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select open (border) edges of an Editable Poly.</li>
+<li>In the right-click menu, choose <strong>Extend Borders</strong> (right after Extrude). <!-- CHECK: changelog says edge and border level; the macro also allows vertex level --></li>
+<li>In the small window, set <strong>Depth</strong> and <strong>Angle</strong>. The new row shows while you change them.</li>
+<li><strong>Apply</strong> keeps the row and starts another one from the new border. <strong>OK</strong> keeps it and closes. <strong>Cancel</strong> removes what you added.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Setting</th><th>What it does</th></tr>
+<tr><td>Depth</td><td>How far the new row reaches.</td></tr>
+<tr><td>Angle</td><td>Turns the row toward the surface's normal, from -180 to 180 degrees.</td></tr>
+<tr><td>Inherit Smoothing</td><td>New polygons take the smoothing groups and material ID of the polygon they grow from.</td></tr>
+<tr><td>Straighten Corners</td><td>Corner vertices are placed so the new border stays parallel to the old one.</td></tr>
+<tr><td>Respect Loop Ends</td><td>At the end of an open loop, the angle follows only the polygon at that end.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>Your settings and the window position are remembered between sessions.</li>
+<li>The whole thing is one undo step.</li>
+<li>The new polygons face the same way as their neighbours.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

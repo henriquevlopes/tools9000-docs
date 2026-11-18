@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>To Surface - Tools9000 docs</title>
+<meta name="description" content="To Surface: project selected vertices onto a face plane or a real surface.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / To Surface</div>
+<h1>To Surface</h1>
+<p class="lead">Slide vertices along a direction onto a plane or surface.</p>
+
+<h2>What it does</h2>
+<p>To Surface slides the selected vertices along one direction until they land on a face you pick. Use it to flatten vertices onto a plane, or to wrap them onto another object. It works on Editable Poly, Edit Poly and spline knots.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the vertices to move.</li>
+<li>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> for the Align pie and choose <strong>To Surface</strong> (under Flatten). <!-- CHECK: hotkey is the default --></li>
+<li>Pick the direction: click an edge, or press <kbd>X</kbd>, <kbd>Y</kbd>, <kbd>Z</kbd> or <kbd>N</kbd>.</li>
+<li>Hover a face to preview, then click it to keep. <kbd>Shift</kbd>+click adds more faces.</li>
+<li><kbd>Enter</kbd> or <kbd>Space</kbd> keeps the result. Right-click or <kbd>Esc</kbd> cancels.</li>
+</ol>
+<figure><img src="../img/surface_guide.png" alt="The To Surface box listing the options and their keys" width="367" height="209"></figure>
+
+<h2>Options</h2>
+<table>
+<tr><th>Key</th><th>Option</th><th>What it does</th></tr>
+<tr><td><kbd>X</kbd><kbd>Y</kbd><kbd>Z</kbd></td><td>Axis</td><td>Slide along that axis of the current reference coordinate system. Press the same key again for the object's own axis.</td></tr>
+<tr><td><kbd>N</kbd></td><td>Normal</td><td>Slide straight onto the target, along its normal.</td></tr>
+<tr><td><kbd>E</kbd></td><td>Pick an edge</td><td>Pick another edge to set the direction.</td></tr>
+<tr><td><kbd>P</kbd></td><td>3 points</td><td>Define the plane by clicking 3 points (vertices snap) instead of faces.</td></tr>
+<tr><td><kbd>A</kbd></td><td>Angle only</td><td>Takes only the angle of the target; the plane goes through the middle of your selection.</td></tr>
+<tr><td><kbd>S</kbd></td><td>Real surface</td><td>Lands on the actual surface of the clicked object instead of its flat plane.</td></tr>
+</table>
+<p>The viewport can still be moved while the tool runs: middle mouse pans, <kbd>Alt</kbd>+middle orbits, the wheel zooms.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Several faces picked with Shift+click give their averaged plane.</li>
+<li>The box shows how many vertices have moved.</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

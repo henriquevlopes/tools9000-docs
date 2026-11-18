@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nudge - Tools9000 docs</title>
+<meta name="description" content="Nudge: move objects, vertices, spline knots or UVs a fixed step at a time.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Nudge</div>
+<h1>Nudge</h1>
+<p class="lead">Move the selection with the arrow keys in fixed steps.</p>
+
+<h2>What it does</h2>
+<p>Nudge moves the selection one step each time you press an arrow key. It moves selected objects, vertices of an Editable Poly or Edit Poly, spline knots, and UVs in the Unwrap UVW editor.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select what you want to move.</li>
+<li>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> for the Align pie and click one of the numbers on the <strong>Nudge</strong> row. That number is the step. <!-- CHECK: hotkey is the default --></li>
+<li>Press the arrow keys or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> to move. Hold a key to repeat.</li>
+<li><kbd>Enter</kbd>, <kbd>Space</kbd>, <kbd>Esc</kbd> or a click ends it.</li>
+</ol>
+<figure><img src="../img/nudge_guide.png" alt="The Nudge box showing the step and the keys" width="428" height="141"></figure>
+
+<h2>Options</h2>
+<table>
+<tr><th>Key</th><th>What it does</th></tr>
+<tr><td>Arrows or <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></td><td>Move one step. Up / down uses the world axis closest to the screen's up, left / right the one closest to the screen's right.</td></tr>
+<tr><td><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd></td><td>Step of 1, 5, 50 or 100 (on UVs: 0.001, 0.01, 0.05, 0.1).</td></tr>
+<tr><td><kbd>+</kbd><kbd>-</kbd></td><td>Double or halve the step.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>The box shows the step and how far you have moved in total.</li>
+<li>On UVs the left / right keys move U and up / down move V.</li>
+<li>Your last step is remembered.</li>
+<li>The whole run is one undo step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

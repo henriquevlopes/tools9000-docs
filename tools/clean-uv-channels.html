@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clean UV Channels - Tools9000 docs</title>
+<meta name="description" content="Clean UV Channels: name map channel 1 and remove extra UV channels on many objects in one step.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Clean UV Channels</div>
+<h1>Clean UV Channels</h1>
+<p class="lead">Name the first UV channel and clear all the others, on every selected object.</p>
+
+<h2>What it does</h2>
+<p>Clean UV Channels tidies the UV channels of the selected objects. It can give map channel 1 a name (shown in Max's Channel Info), delete every other map channel that holds data, and collapse the modifier stack. It is meant for getting many objects ready for export with one clean UV set.</p>
+<figure><img src="../img/uv_channels.png" alt="The Clean UV Channels dialog" width="256" height="189"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the objects.</li>
+<li>Run <strong>Clean UV Channels</strong> (macro in the 9000 Toolkit category).</li>
+<li>Fill in the options and click <strong>Apply</strong>. The dialog reports what it did, for example how many extra channels were cleared.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Channel 1 name</td><td>Names map channel 1 on every selected object. Leave it empty to keep the current names.</td></tr>
+<tr><td>Remove other channels</td><td>Clears every map channel above 1 that holds data (on by default). It looks at the real channels of the object, so gaps in the numbering are handled.</td></tr>
+<tr><td>Collapse modifiers</td><td>Collapses the stack and converts the object to Editable Poly (off by default).</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>It works on geometry objects that can be converted to an editable mesh. Cameras, lights and similar objects are skipped.</li>
+<li>The whole selection is one undo step.</li>
+<li>If the Modify panel is open, it switches to Create while working and comes back afterwards.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Check N-gons - Tools9000 docs</title>
+<meta name="description" content="Check N-gons: finds and outlines polygons with more than four sides.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Check N-gons</div>
+<h1>Check N-gons</h1>
+<p class="lead">Find every polygon with more than four sides in one click.</p>
+
+<h2>What it does</h2>
+<p>Check N-gons looks at each selected object (Editable Poly, or an Edit Poly on the stack) and finds the polygons with more than 4 sides. It outlines them in red in the viewports for a few seconds, with a small marker at the centre of each so tiny ones show too.</p>
+<figure>
+<img src="../img/ngons_viewport.png" alt="Red outlines on a plane where n-gons were found" width="1100" height="713">
+<figcaption>N-gons outlined in red.</figcaption>
+</figure>
+<p>A box at the top of the viewport reports the count per object.</p>
+<figure><img src="../img/ngons_box.png" alt="Result box for Check N-gons" width="79" height="56"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select one or more objects.</li>
+<li>Right-click and choose <strong>Check N-gons</strong> in the Scripts part of the menu, right after Rebuild Mesh.</li>
+<li>Read the box. The outlines disappear after a few seconds.</li>
+</ol>
+
+<h2>Options</h2>
+<p>There are no settings.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>The box is green when there are none and red when n-gons were found or nothing usable was selected.</li>
+<li>The n-gons are also selected where that changes nothing on screen: on an Editable Poly, and on an Edit Poly only while it is current at polygon level. Otherwise the box says so.</li>
+<li>The screen is left as it was: no switch of panel or sub-object level.</li>
+<li>When nothing is found nothing changes and there is no undo step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3 Point Align - Tools9000 docs</title>
+<meta name="description" content="3 Point Align: place the selection by picking three points on it and three where they should land.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / 3 Point Align</div>
+<h1>3 Point Align</h1>
+<p class="lead">Move objects by matching three points to three targets.</p>
+
+<h2>What it does</h2>
+<p>3 Point Align moves the selected objects so three points on them land on three points you choose. Point 1 lands on target 1, point 2 on the line from target 1 to target 2, and point 3 in the plane of the three targets.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the objects to move.</li>
+<li>Run <strong>3 Point Align</strong> from the 9000 Toolkit category. <!-- CHECK: exact menu location not found in the source; it keeps the id of an older menu item --></li>
+<li>Click three points on the selection, then three points where they should land. The box at the top of the viewport tells you which point is next. Points snap to 3D snaps.</li>
+<li>A small window opens with <strong>Flip</strong> and <strong>Offset</strong>. Press <strong>OK</strong> to keep, or Cancel.</li>
+</ol>
+<figure><img src="../img/threepoint_guide.png" alt="The 3 Point Align box asking for point 1" width="209" height="75"></figure>
+<figure><img src="../img/threepoint_dialog.png" alt="The small window with Flip and Offset" width="178" height="111"></figure>
+
+<h2>Options</h2>
+<table>
+<tr><th>Setting</th><th>What it does</th></tr>
+<tr><td>Flip to the other side</td><td>Turns the objects over to the other side of the plane.</td></tr>
+<tr><td>Offset</td><td>Moves the objects along the plane's normal.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>Every selected object moves together as one.</li>
+<li>Three points on one line are refused.</li>
+<li>Right-click or <kbd>Esc</kbd> cancels while picking.</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

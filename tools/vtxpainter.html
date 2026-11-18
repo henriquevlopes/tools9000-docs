@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VTXPainter 9000 - Tools9000 docs</title>
+<meta name="description" content="VTXPainter 9000: a panel to paint and assign vertex colors on Editable Poly or Mesh.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / VTXPainter 9000</div>
+<h1>VTXPainter 9000</h1>
+<p class="lead">Paint and assign vertex colors from a Max-style panel.</p>
+
+<h2>What it does</h2>
+<p>VTXPainter 9000 is a panel for vertex colors on an Editable Poly or Editable Mesh. You can paint with a viewport brush, assign a color to the current selection, sample colors with an eyedropper and switch which channel you work on.</p>
+<figure>
+<img src="../img/panel-painting.png" alt="VTXPainter9000 panel with the brush running" width="260" height="603">
+<figcaption>The panel while painting.</figcaption>
+</figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select an Editable Poly or Editable Mesh.</li>
+<li>Open <strong>VTXPainter9000</strong> (9000 Toolkit category, or a toolbar button).</li>
+<li>Pick a channel, then pick a color: a preset, the color box or the eyedropper.</li>
+<li><strong>Assign to Selection</strong> paints the selected vertices, edges or faces. The <strong>Painting</strong> button starts the viewport brush; click it again, press <kbd>Esc</kbd> or select another object to stop.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Section</th><th>What it does</th></tr>
+<tr><td>Display</td><td><strong>Toggle Selected</strong> shows or hides vertex colors on the selected objects. <strong>Hide All</strong> hides them across the whole scene.</td></tr>
+<tr><td>Channel</td><td>Color, Illum, Alpha or Custom (any map channel from 1 to 99).</td></tr>
+<tr><td>Color</td><td>The current color, 6 presets (click to apply, right-click to change one) and an eyedropper that reads the exact color from a vertex.</td></tr>
+<tr><td>Paint</td><td>Assign to Selection, a "Whole object fallback" for when nothing is selected, and the brush button.</td></tr>
+<tr><td>Brush</td><td>Size, Flow, Hard or Soft edge and Brush Options. It opens by itself when you start the brush.</td></tr>
+<tr><td>Advanced</td><td>Rarely used settings, closed by default.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>The brush is Max's own painter, with the usual ring, falloff and pen pressure. With an edge or face selection it paints only those vertices.</li>
+<li>The eyedropper needs a vertex selection and warns you if you use it from edges or faces.</li>
+<li>Spinners: drag sideways to change, <kbd>Ctrl</kbd> faster, <kbd>Alt</kbd> finer, wheel, click to type, right-click to reset.</li>
+<li>The panel follows your Max highlight color and remembers its position, open sections and presets.</li>
+<li>Made for Max 2024. <!-- CHECK: VTXPainter is also sold on its own; confirm whether the docs should say it comes with Tools9000 --></li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

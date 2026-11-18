@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modes Pie - Tools9000 docs</title>
+<meta name="description" content="Modes pie: switch sub-object level with a flick on Tab, converting the selection.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Modes Pie</div>
+<h1>Modes Pie</h1>
+<p class="lead">Switch between Object, Vertex, Edge, Border, Polygon and Element with a flick of Tab.</p>
+
+<h2>What it does</h2>
+<p>The Modes pie changes the sub-object level. Each mode is always in the same place, so you can flick without looking. The level you are in is outlined. It works on Editable Poly, Edit Poly, Editable Spline and Unwrap UVW.</p>
+<figure>
+<img src="../img/modes_pie.png" alt="The Modes pie with Object, Vertex, Polygon, Border, Element and Edge" width="418" height="308">
+<figcaption>The Modes pie on a poly.</figcaption>
+</figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select an object and press <kbd>Tab</kbd>. A pie menu opens around the mouse. Hold the key, flick the mouse toward a button and let go to run it. You can also click a button. <kbd>Esc</kbd>, a right-click or a click in the centre closes the pie. If you let go of the key without moving, the pie stays open for a click.</li>
+<li>Flick toward the mode you want: Vertex left, Polygon right, Edge bottom, Object top, Border bottom left, Element bottom right.</li>
+<li>The selection is converted as you change level, like <kbd>Ctrl</kbd>+clicking a level in the modify panel: the new level gets everything the old selection touches.</li>
+</ol>
+
+<h2>Options</h2>
+<table>
+<tr><th>Button</th><th>What it does</th></tr>
+<tr><td>Object</td><td>Leaves the sub-object level.</td></tr>
+<tr><td>Vertex, Edge, Border, Polygon, Element</td><td>Goes to that level of the Editable Poly at the bottom of the stack, even with modifiers on top.</td></tr>
+<tr><td>Spline, Segment</td><td>On a spline the right button is Spline and the bottom button is Segment; Border and Element are left out.</td></tr>
+</table>
+<p>On a poly, going from polygons to vertices or edges takes everything they touch. Going from vertices or edges to polygons takes only the polygons they fully enclose.</p>
+<figure>
+<img src="../img/modes_pie_uv.png" alt="The Modes pie in the UV editor, without the Border button" width="418" height="308">
+<figcaption>In the UV editor there is no Border button.</figcaption>
+</figure>
+
+<h2>Good to know</h2>
+<ul>
+<li>In the Edit UVWs window the pie works on UVs. Element selects whole islands.</li>
+<li>Picking Edge while already at edge level turns Max's hard-edge display on or off.</li>
+<li>Tab also opens the pie when the keyboard focus is in a Max panel such as the modifier stack, and focus returns to where it was afterwards.</li>
+<li>From Object level the pie converts from the level you last left.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

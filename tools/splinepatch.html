@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SplinePatch - Tools9000 docs</title>
+<meta name="description" content="SplinePatch: draw an outline on a surface and get a live, editable patch of quads.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / SplinePatch</div>
+<h1>SplinePatch</h1>
+<p class="lead">Draw a patch on any surface from a curve, and keep it live.</p>
+
+<h2>What it does</h2>
+<p>SplinePatch makes a raised patch on one or more surfaces, like a sticker, a blob of paint or a plate of armour. You click an outline on the surface; the tool makes a curve with a <strong>SplinePatch9000</strong> modifier on it. The patch is built from the curve and stays live: edit the curve, change a setting, or move or edit the surfaces underneath, and the patch follows.</p>
+<figure><img src="../img/splinepatch_creature.png" alt="A SplinePatch laid over a creature, shown as quads" width="1000" height="666">
+<figcaption>A patch made of quads, following the surface.</figcaption>
+</figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Run <strong>SplinePatch</strong> (its button, or the SplinePatch item at the end of the Scripts part of the Q menu). Nothing needs to be set up.</li>
+<li>Click points on any object. The first click makes the curve and the patch and opens it in the modifier panel. Every object you click joins the surface list, so an outline can run across several objects. Hidden and frozen objects are skipped.</li>
+<li>Shift or Ctrl held while you click makes a corner point; otherwise the point is smooth. The label at the top of the viewport shows SMOOTH or CORNER.</li>
+<li>At 3 points the patch appears, and it updates with every further point. Right-click or <kbd>Esc</kbd> ends it.</li>
+<li>Adjust the settings in the modifier panel. To change a patch later, select it and run SplinePatch again: it asks whether to <strong>Edit</strong> it or make a <strong>New</strong> one on top.</li>
+</ol>
+<figure><img src="../img/splinepatch_rim_waves.png" alt="A flat patch with a wavy rim" width="1000" height="493">
+<figcaption>Rim waves switched on.</figcaption>
+</figure>
+
+<h2>Options</h2>
+<p>The modifier panel has a blue <strong>Add targets</strong> button with the list of surfaces (select rows and press <strong>Remove</strong> to take them off), a blue <strong>Place points</strong> button, <strong>Edit points</strong> and a status line. Place points works like the tool and needs no surface in the list first: a click on a new object adds it.</p>
+<table>
+<tr><th>Setting</th><th>What it does</th></tr>
+<tr><td>Height</td><td>How high the patch rises above the surface.</td></tr>
+<tr><td>Edge width</td><td>Width of the sloped edge.</td></tr>
+<tr><td>Spacing</td><td>Face size. Smaller means more detail.</td></tr>
+<tr><td>Edge detail</td><td>How many rows of faces the sloped edge has.</td></tr>
+<tr><td>Roundness %</td><td>0 is a straight slope, 100 a round edge.</td></tr>
+<tr><td>Rim waves %</td><td>Makes the edge wavy, like slime. 0 is off.</td></tr>
+<tr><td>Rim seed</td><td>Changes the random shape of the waves.</td></tr>
+<tr><td>Quads</td><td>Four-sided faces in rows along the edge. Off gives triangles.</td></tr>
+<tr><td>Cap underside</td><td>Adds a flat back on the surface, so the mesh is closed (watertight).</td></tr>
+<tr><td>Flip direction</td><td>Pushes the patch into the surface instead of out of it.</td></tr>
+</table>
+<p>Height, Edge width and Spacing are always in sight; the rest is behind <strong>+ More shape settings</strong>, which opens by itself when one of them is not at its default. <strong>Edit points</strong> takes you to the curve's points, drawn on top of the patch; click SplinePatch9000 in the stack to go back.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>The patch is real quads (no n-gons), with a few triangles where rows end or at sharp corners.</li>
+<li>While you drag a point or a spinner it shows a quicker, coarser version, and the full patch comes back when you let go.</li>
+<li>When you close the modifier panel, its settings become the starting settings of your next patch.</li>
+<li>A new patch is one undo step. Pressing Esc or right-click before the first click makes nothing.</li>
+<li>You can put a patch on a patch. The modifier can also be added to any spline from the Modifier List; with fewer than 3 points it shows nothing and tells you how many are missing.</li>
+<li>Older patches (a mesh made by the tool, from when it was called Stamp) get a <strong>Make live</strong> button in the Edit / New question; one undo puts the old patch back.</li>
+<li>Where the curve comes back too close to itself for the patch to fill, the points on both sides turn pink and a message names them: move or delete one of them. <!-- CHECK: from the 0.73 changelog; may only apply to the old dialog --></li>
+<li>A patch that wraps over a strongly curved part (a nose tip, a limb) is laid out on the surface itself, so it follows the shape.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ghost View - Tools9000 docs</title>
+<meta name="description" content="Ghost View: make the selected objects see-through and tinted so you can see what is behind them.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Ghost View</div>
+<h1>Ghost View</h1>
+<p class="lead">Make the selected objects see-through, so you can work on them and still see what is behind.</p>
+
+<h2>What it does</h2>
+<p>Ghost View turns the selected objects see-through and tints them. Press it again and each object returns to exactly how it was.</p>
+<figure><img src="../img/ghost_box.png" alt="The message box shown at the top of the viewport" width="114" height="56"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select one or more objects.</li>
+<li>Run <strong>Ghost View</strong> (macro in the 9000 Toolkit category, <kbd>Alt</kbd>+<kbd>Z</kbd> by default). <!-- CHECK: default hotkey from the deploy list --></li>
+<li>Run it again to bring the objects back.</li>
+</ol>
+
+<h2>Options</h2>
+<p>There are no settings. What the key does depends on the selection:</p>
+<table>
+<tr><th>Selection</th><th>Result</th></tr>
+<tr><td>Objects that are not ghosts</td><td>All selected objects become ghosts.</td></tr>
+<tr><td>Only ghosts</td><td>They go back to normal.</td></tr>
+<tr><td>A mix</td><td>Everything becomes a ghost first.</td></tr>
+<tr><td>Nothing selected</td><td>Every ghost in the scene goes back to normal.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>Each object remembers its own vertex colour display and see-through setting, and gets them back on exit, also after saving and reopening the scene.</li>
+<li>The tint uses the object's vertex colour display, so a vertex colour view you had on is replaced while the object is a ghost. <!-- CHECK: inferred from the code that the tint reuses the vertex colour display --></li>
+<li>One undo step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

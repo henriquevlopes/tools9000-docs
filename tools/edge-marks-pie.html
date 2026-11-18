@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edge Marks Pie - Tools9000 docs</title>
+<meta name="description" content="Edge Marks pie: crease, edge weight, hard and smooth edges from one pie.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Edge Marks Pie</div>
+<h1>Edge Marks Pie</h1>
+<p class="lead">Crease, edge weight, hard and smooth edges, all from one pie on Shift+E.</p>
+
+<h2>What it does</h2>
+<p>The Edge Marks pie puts the edge marks you use most in one place: crease, edge weight, hard edges and smooth edges. It works on Editable Poly and Edit Poly (also an Edit Poly shared by several objects).</p>
+<figure>
+<img src="../img/edge_marks_pie.png" alt="The Edge Marks pie with seven buttons around a centre circle" width="463" height="308">
+<figcaption>The Edge Marks pie.</figcaption>
+</figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Go to edge, border or polygon level of an Editable Poly or Edit Poly. At other levels the key does nothing.</li>
+<li>Press <kbd>Shift</kbd>+<kbd>E</kbd>. A pie menu opens around the mouse. Hold the key, flick the mouse toward a button and let go to run it. You can also click a button. <kbd>Esc</kbd>, a right-click or a click in the centre closes the pie. If you let go of the key without moving, the pie stays open for a click.</li>
+<li>Pick a button. <strong>Make Hard</strong>, <strong>Make Smooth</strong>, <strong>Hard per Face</strong>, <strong>Clear Crease</strong> and <strong>Clear Weight</strong> act at once.</li>
+<li><strong>Crease...</strong> and <strong>Weight...</strong> open a drag tool: move the mouse left or right to set the value, or type a number and press <kbd>Enter</kbd>. Click or <kbd>Enter</kbd> keeps it; right-click or <kbd>Esc</kbd> puts it back.</li>
+</ol>
+<figure><img src="../img/edge_marks_drag.png" alt="Small box at the top of the viewport showing the crease value and the keys" width="267" height="53"></figure>
+
+<h2>Options</h2>
+<table>
+<tr><th>Button</th><th>Position</th><th>What it does</th></tr>
+<tr><td>Crease...</td><td>Top</td><td>Drag tool to set the crease of the selected edges.</td></tr>
+<tr><td>Clear Crease</td><td>Top right</td><td>Sets the crease back to 0.</td></tr>
+<tr><td>Make Smooth</td><td>Right</td><td>Makes the edges smooth: the faces on both sides share a smoothing group.</td></tr>
+<tr><td>Clear Weight</td><td>Bottom right</td><td>Sets the edge weight back to 1.</td></tr>
+<tr><td>Weight...</td><td>Bottom</td><td>Drag tool to set the edge weight.</td></tr>
+<tr><td>Hard per Face</td><td>Bottom left</td><td>Polygon level: gives each selected polygon its own smoothing group, so all its edges are hard.</td></tr>
+<tr><td>Make Hard</td><td>Left</td><td>Makes the edges hard: smoothing groups are split across them.</td></tr>
+</table>
+<p>In the drag tools, <kbd>Ctrl</kbd> moves in steps and <kbd>Shift</kbd> moves in fine steps.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>At polygon level the marks go on the border of the selected polygons.<!-- CHECK: code builds "border" edges unless "whole" is requested; unsure which buttons use whole --></li>
+<li>While a drag tool is open, Max's keyboard shortcuts are off, so the number keys type into the value instead of changing sub-object level.</li>
+<li>Max's own hard-edge display can be toggled from the <a href="modes-pie.html">Modes pie</a>.</li>
+<li>Marks work on large selections quickly.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

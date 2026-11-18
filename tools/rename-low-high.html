@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rename Low / High - Tools9000 docs</title>
+<meta name="description" content="Rename Low / High: names a low poly and its high poly parts for baking.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Rename Low / High</div>
+<h1>Rename Low / High</h1>
+<p class="lead">Name a low poly and its high poly parts in one go, ready for baking.</p>
+
+<h2>What it does</h2>
+<p>Select one low poly object and its high poly parts, then run the tool. The low becomes <code>Body_low</code> and the highs become <code>Body_high</code>, <code>Body_high1</code>, <code>Body_high2</code> and so on, where <em>Body</em> is the low's name without its old suffix. Every high gets its own name, so other programs do not rename them on import.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the low poly and all its high poly parts.</li>
+<li>Press <kbd>Alt</kbd>+<kbd>R</kbd> (or run <strong>Rename Low / High</strong> from the 9000 Toolkit category).</li>
+<li>If something is wrong with the selection, a message box says what.</li>
+</ol>
+
+<h2>Options</h2>
+<p>There is nothing to set. The tool decides which object is the low like this:</p>
+<ul>
+<li>An object on a layer named like a low poly layer (Low, LP, Low Poly and similar, or inside one) is always the low.</li>
+<li>An object on a high poly layer (High, HP and similar) is always a high.</li>
+<li>Otherwise the object with the fewest polygons is the low.</li>
+</ul>
+
+<h2>Good to know</h2>
+<ul>
+<li>Names are made safe for other programs such as Maya: spaces and symbols become <code>_</code>.</li>
+<li>If another pair already uses the name, the new pair becomes <code>Body_01_low</code> / <code>Body_01_high</code>, then <code>_02</code> and so on. <!-- CHECK: numbering form taken from the changelog and tool comments, not run --></li>
+<li>It is one undo step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SG Colors 9000 - Tools9000 docs</title>
+<meta name="description" content="SG Colors 9000: a small modifier that paints smoothing-group colours on the finished object.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / SG Colors 9000</div>
+<h1>SG Colors 9000</h1>
+<p class="lead">Shows the real smoothing groups of the finished object.</p>
+
+<h2>What it does</h2>
+<p>SG Colors 9000 is a small helper modifier used by the <a href="smoothing.html">Smoothing</a> panel's Colors button. While the colours are on, it sits on top of the stack and paints the smoothing groups of the end result. That way a mirrored side made by <a href="symmetry-9000.html">Symmetry 9000</a> shows its own colours, not a copy of the source's.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>You do not add it yourself. Select your objects and press <strong>Colors</strong> in the <a href="smoothing.html">Smoothing</a> panel.</li>
+<li>On objects that have modifiers other than Edit Poly, SG Colors 9000 appears on top of the stack.</li>
+<li>Press <strong>Colors</strong> again to turn the colours off. The modifier is removed.</li>
+</ol>
+
+<h2>Options</h2>
+<p>There is nothing to set by hand. The modifier only paints into the colour channel the Smoothing panel gives it.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>It follows changes live, including edits in an Edit Poly lower in the stack.</li>
+<li>It stays on top when you add more modifiers.</li>
+<li>Objects with only Edit Poly modifiers work without it.</li>
+<li>Restart 3ds Max once after the setup so the plugin loads.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

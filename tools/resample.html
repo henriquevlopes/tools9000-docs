@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Resample - Tools9000 docs</title>
+<meta name="description" content="Resample: set a new number of vertices along selected edge rows, live.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Resample</div>
+<h1>Resample</h1>
+<p class="lead">Change the number of points along a selected row.</p>
+
+<h2>What it does</h2>
+<p>Resample sets a new number of points along the selected rows of vertices or edges. More points add vertices; fewer points remove them. The result shows while you change the number.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the vertices, edges or borders you want to change (a row of them).</li>
+<li>In the right-click menu, choose <strong>Resample</strong> (it is in the group with Connect). It only shows at vertex, edge and border level.</li>
+<li>Use the mouse wheel or <kbd>+</kbd> / <kbd>-</kbd> to add or remove one point at a time, or type the number you want.</li>
+<li>Click, <kbd>Enter</kbd> or <kbd>Space</kbd> keeps it. Right-click or <kbd>Esc</kbd> cancels.</li>
+</ol>
+<figure><img src="../img/resample_guide.png" alt="The Resample box showing the Points value and the Evenly spaced option" width="471" height="124"></figure>
+
+<h2>Options</h2>
+<table>
+<tr><th>Key</th><th>Option</th><th>What it does</th></tr>
+<tr><td><kbd>E</kbd></td><td>Evenly spaced</td><td>Spreads the points at equal distances along the row.</td></tr>
+</table>
+<p>Ctrl + wheel doubles or halves the number of points. The viewport can still be moved while the tool runs: middle mouse pans, <kbd>Alt</kbd>+middle orbits, the wheel zooms.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Rows that branch are skipped, and the box tells you how many.</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

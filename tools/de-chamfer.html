@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>De-Chamfer - Tools9000 docs</title>
+<meta name="description" content="De-Chamfer: collapse selected chamfer strips back into a single sharp edge.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / De-Chamfer</div>
+<h1>De-Chamfer</h1>
+<p class="lead">Turn chamfer strips back into sharp edges.</p>
+
+<h2>What it does</h2>
+<p>De-Chamfer undoes a chamfer. Select the strip of polygons the chamfer made, and it collapses them back into one sharp edge, with the neighbouring polygons meeting again at the original corner.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Go to polygon or element level of an Editable Poly (or an Edit Poly at the top of the stack) and select the chamfer strips.</li>
+<li>In the right-click menu, choose <strong>De-chamfer</strong> (right after Chamfer).</li>
+<li>The strip collapses at once.</li>
+</ol>
+
+<h2>Good to know</h2>
+<ul>
+<li>The neighbouring polygons keep their own smoothing groups, material IDs and UVs.</li>
+<li>New edges that come out sharp (about 30 degrees or more) between polygons of the same smoothing group are made hard.</li>
+<li>It also puts back corners on curved bodies and on a chamfer that stops partway along an edge.</li>
+<li>If the selection does not look like a chamfer strip, you get a message and nothing changes.</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spiral 9000 - Tools9000 docs</title>
+<meta name="description" content="Spiral 9000: wraps spiral straps, threads or knurls round selected edges on an Editable Poly.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Spiral 9000</div>
+<h1>Spiral 9000</h1>
+<p class="lead">Straps, screw threads and knurls round a tube, from selected edges.</p>
+
+<h2>What it does</h2>
+<p>Spiral 9000 rebuilds a band of selected lengthwise edges as diagonal lines. On a closed ring, such as a cylinder, the lines run round as a seamless spiral. On an open strip you get parallel slanted lines. It works on Editable Poly only.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select an Editable Poly and go to edge level. Select the lengthwise edges of the band, for example the vertical edges of a cylinder.</li>
+<li>Right-click and choose <strong>Spiral9000</strong> (below the LoopTools9000 submenu). It only shows at edge level on an Editable Poly.</li>
+<li>Press <strong>Get Selection</strong> to read the selected edges. Press it again after you change the selection.</li>
+<li>Choose a mode, optionally a preset, and set the options. With <strong>Show Preview</strong> on, the result updates while you adjust.</li>
+<li>Press <strong>Apply</strong>. It is one undo step, and the new lines end up selected.</li>
+</ol>
+
+<h2>Options</h2>
+<h3>Modes</h3>
+<table>
+<tr><th>Mode</th><th>What it makes</th></tr>
+<tr><td>Wrap</td><td>Overlapping straps, like tape wound round a handle.</td></tr>
+<tr><td>Thread</td><td>A screw thread cut into the surface, or raised from it. With <strong>Cross</strong> it makes a diamond knurl.</td></tr>
+<tr><td>Line</td><td>Only the new spiral lines, flat.</td></tr>
+</table>
+<h3>Lines (all modes)</h3>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Angle</td><td>Slope of the lines in degrees. Low is nearly flat rings, high is steep.</td></tr>
+<tr><td>Right / Left</td><td>Twist direction.</td></tr>
+<tr><td>Spacing</td><td>Strap width. On a closed tube it adjusts so the straps meet without a seam.</td></tr>
+<tr><td>Offset</td><td>Slides all lines along the tube.</td></tr>
+<tr><td>Bias</td><td>Crowds the lines toward one end.</td></tr>
+<tr><td>Cross</td><td>A second set of lines the other way. In Wrap the straps weave over and under each other.</td></tr>
+</table>
+<h3>Thread</h3>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Pitch</td><td>Distance from one thread to the next.</td></tr>
+<tr><td>Starts</td><td>Number of threads side by side.</td></tr>
+<tr><td>Depth</td><td>How deep the thread is cut, or how high it stands.</td></tr>
+<tr><td>Raised</td><td>Off cuts into the surface. On makes it stand out.</td></tr>
+<tr><td>Crest % / Root %</td><td>Flat top and flat bottom of the thread, as a share of the pitch.</td></tr>
+<tr><td>Runout</td><td>The thread fades out smoothly over this length at both ends.</td></tr>
+</table>
+<h3>Wrap</h3>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Thickness</td><td>Height of each strap's raised edge.</td></tr>
+<tr><td>Lip % / Lip Segs</td><td>Width of the rounded edge, and how many loops it has.</td></tr>
+<tr><td>Segs</td><td>Loops along the flat part of each strap.</td></tr>
+<tr><td>Shrink / Auto Shrink</td><td>Pulls the wrap in to make up for the added thickness.</td></tr>
+<tr><td>End Tabs</td><td>A flat band at both ends. Set its Height and its edge: Flat, Chamfer or Bead.</td></tr>
+<tr><td>Weave</td><td>With Cross, how far a strap dips where it runs under another.</td></tr>
+</table>
+<h3>Finish</h3>
+<table>
+<tr><th>Option</th><th>What it does</th></tr>
+<tr><td>Crease</td><td>Creases the strap borders (in Thread, every line) so subdivision keeps them sharp.</td></tr>
+<tr><td>Smooth Surface</td><td>Places new points on the smooth curve through the columns so the result is round. Turn off for boxy shapes.</td></tr>
+<tr><td>Cap Ring</td><td>Adds a ring of quads just inside each cap.</td></tr>
+<tr><td>Strap UVs</td><td>Lays each strap out as one straight strip in UV channel 1.</td></tr>
+<tr><td>IDs</td><td>Keep the object's material IDs, alternate between 1 and 2, or give every strap its own ID.</td></tr>
+<tr><td>See-Through</td><td>Makes the preview transparent, to line it up with what is behind.</td></tr>
+</table>
+<h3>Presets</h3>
+<p>Pick ready-made settings from the Preset list for the current mode. They scale to the tube's thickness. <strong>Save</strong> stores your own, <strong>Delete</strong> removes one of yours (marked with *).</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Apply also stores the settings on the object. Select the same edges later and press Get Selection to load them back.</li>
+<li>Spiral installs a small plugin: restart 3ds Max once after the setup.</li>
+<li>It works on Editable Poly only, not on the Edit Poly modifier.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

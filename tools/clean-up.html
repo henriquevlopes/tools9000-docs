@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clean Up - Tools9000 docs</title>
+<meta name="description" content="Clean Up: one key that tidies vertices or fixes flipped polygons, depending on the sub-object level.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Clean Up</div>
+<h1>Clean Up</h1>
+<p class="lead">One key tidies up the mesh you are editing. What it does depends on the level you are in.</p>
+
+<h2>What it does</h2>
+<p>Clean Up works on the Editable Poly or Edit Poly you are editing, at any sub-object level. It is one undo step, and a box at the top of the viewport tells you what it did.</p>
+<p>At <strong>vertex, edge or border</strong> level it cleans the vertices: it welds vertices that sit on top of each other, removes loose vertices, and removes vertices sitting in the middle of a straight edge. Then it selects the open edges (at vertex level, their vertices). It never flips a polygon at these levels.</p>
+<figure><img src="../img/cleanup_box.png" alt="Result box: removed 1 vertex, 8 open edges selected" width="223" height="56"><figcaption>The result box after a vertex clean.</figcaption></figure>
+<p>At <strong>polygon or element</strong> level it only turns polygons that face inward back outward, and removes nothing.</p>
+<figure><img src="../img/cleanup_polys_box.png" alt="Result box after flipping polygons" width="104" height="56"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the object and go to the Modify panel, then to a sub-object level.</li>
+<li>Press <kbd>3</kbd>. You can also run <strong>Clean Up</strong> from the 9000 Toolkit category in Customize.</li>
+<li>Read the box at the top of the viewport. <kbd>Ctrl</kbd>+<kbd>Z</kbd> undoes everything in one step.</li>
+</ol>
+
+<h2>Options</h2>
+<p>There are no options. The level decides the job:</p>
+<table>
+<tr><th>Level</th><th>What it does</th></tr>
+<tr><td>Vertex, edge, border</td><td>Welds doubled vertices, removes loose and straight-line vertices, selects open edges.</td></tr>
+<tr><td>Polygon, element</td><td>Flips inward-facing polygons outward. Nothing is removed.</td></tr>
+</table>
+
+<h2>Good to know</h2>
+<ul>
+<li>Outside a sub-object level, <kbd>3</kbd> does what it did in Max before (switches to sub-object level 3).</li>
+<li>It works on Editable Poly and Edit Poly only. On anything else the box tells you so.</li>
+<li>With nothing to flip at polygon level, your selection stays and no undo step is added.</li>
+<li>A nearly flat open mesh (a bumpy plane or terrain) is left alone rather than flipped upside down.</li>
+<li>If a mesh is too broken for Clean Up, try Rebuild Mesh.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

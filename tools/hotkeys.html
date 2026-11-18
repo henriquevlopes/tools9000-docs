@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hotkeys - Tools9000 docs</title>
+<meta name="description" content="Every Tools9000 hotkey, what it does and where it works.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Hotkeys</div>
+<h1>Hotkeys</h1>
+<p class="lead">Every key Tools9000 uses, in one table.</p>
+
+<h2>What it does</h2>
+<p>Tools9000 gives keys to its tools when you install it. This page lists them all. Where a key had a Max action before, that action is taken off the key so the two do not fight (two actions on one key in one place and neither runs).</p>
+
+<h2>How to use it</h2>
+<p>Press the key in a viewport, or in the window named in the table. You can change any key in Max under Customize / Customize User Interface / Keyboard, in the category "9000 Toolkit".</p>
+
+<h2>Options</h2>
+<table>
+<tr><th>Key</th><th>Action</th><th>Where</th></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>E</kbd></td><td><a href="edge-marks-pie.html">Edge Marks pie</a></td><td>Editable Poly / Edit Poly, edge, border or polygon level</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd></td><td><a href="align-pie.html">Align pie</a></td><td>Objects, poly vertices, splines and the Unwrap UVW editor</td></tr>
+<tr><td><kbd>Tab</kbd></td><td><a href="modes-pie.html">Modes pie</a></td><td>Poly, spline and Unwrap UVW</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td><a href="save-pie.html">Save pie</a></td><td>Everywhere</td></tr>
+<tr><td><kbd>Num 0</kbd></td><td><a href="camera-switch.html">Camera Switch</a></td><td>Active viewport</td></tr>
+<tr><td><kbd>Alt</kbd>+<kbd>S</kbd></td><td>UV toolbar (UV &amp; Smoothing panel)</td><td>Everywhere</td></tr>
+<tr><td><kbd>Shift</kbd>+<kbd>Alt</kbd>+<kbd>S</kbd></td><td>Smoothing panel</td><td>Everywhere</td></tr>
+<tr><td><kbd>Alt</kbd>+<kbd>A</kbd></td><td>Align / Planar Map: aligns objects or a poly selection; in Unwrap UVW collapses UV vertices, aligns to edge or planar maps, by level</td><td>Everywhere, also the Edit UVWs window</td></tr>
+<tr><td><kbd>Alt</kbd>+<kbd>R</kbd></td><td>Rename Low / High</td><td>Everywhere</td></tr>
+<tr><td><kbd>3</kbd></td><td>Clean Up</td><td>At a sub-object level of an Editable Poly or Edit Poly; elsewhere it stays Max's own 3</td></tr>
+<tr><td><kbd>Alt</kbd>+<kbd>Z</kbd></td><td>Ghost View: selected objects go see-through and back</td><td>Everywhere</td></tr>
+<tr><td><kbd>Space</kbd></td><td>Smart Create</td><td>Everywhere</td></tr>
+<tr><td><kbd>Ctrl</kbd>+<kbd>B</kbd></td><td>Smart Bevel</td><td>Everywhere</td></tr>
+<tr><td><kbd>A</kbd></td><td>Select All</td><td>Viewport and the other editors that have a Select All (Slate, Particle View, Track View and more)</td></tr>
+<tr><td><kbd>P</kbd></td><td>UV Pack</td><td>Edit UVWs window; elsewhere it still does what P did before</td></tr>
+<tr><td><kbd>U</kbd></td><td>UV Unwrap</td><td>Edit UVWs window; elsewhere it still does what U did before</td></tr>
+<tr><td><kbd>O</kbd></td><td>UV Optimize</td><td>Edit UVWs window; elsewhere it still does what O did before</td></tr>
+</table>
+<p>Max actions that lose their key: Disable Viewport (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd>), Save File (<kbd>Ctrl</kbd>+<kbd>S</kbd>), Align (<kbd>Alt</kbd>+<kbd>A</kbd>), Lock (<kbd>Space</kbd>), Sub-object Selection Toggle (<kbd>Ctrl</kbd>+<kbd>B</kbd>), Select All on <kbd>Ctrl</kbd>+<kbd>A</kbd> (it moves to <kbd>A</kbd>), and on <kbd>3</kbd> the Border level in the poly modes.<!-- CHECK: also Detach on P and Soft Selection on O in poly modes, Pin Selected and Pan on P and Unwrap Options on O in the UV editor; Max's Angle Snap etc. on A --></p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Pie keys: hold the key, flick toward a button and let go.</li>
+<li>A guest install used on another person's PC leaves keys they already use alone, and skips <kbd>P</kbd>, <kbd>U</kbd> and <kbd>O</kbd>.<!-- CHECK: guest mode is installer-internal, confirm this is public behaviour --></li>
+<li>The Alt+S, Alt+A, Alt+R, Alt+Z, Space, Ctrl+B and P / U / O tools are described on their own pages.<!-- CHECK: those pages may not exist on the site --></li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

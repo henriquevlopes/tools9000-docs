@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UV Toolbar - Tools9000 docs</title>
+<meta name="description" content="UV Toolbar: unwrap, optimize, pack, texel density, checker and select tools in one strip under the Edit UVWs window.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / UV Toolbar</div>
+<h1>UV Toolbar</h1>
+<p class="lead">Unwrap, optimize, pack and check UVs from one strip that sits under the Edit UVWs window.</p>
+
+<h2>What it does</h2>
+<p>The UV Toolbar puts the everyday UV work in one place: a checker, unwrap and optimize, straight-edge constraints, texel density, pack, and a set of selectors for common UV problems. It works on an Unwrap UVW modifier.</p>
+<p>Unwrap, Optimize, Pack and the reshape tools use a UV solver built into Tools9000, so no outside program is needed. <!-- CHECK: wording about the solver matching another tool's results was left out on purpose; confirm no mention is wanted --></p>
+<p>The strip has two tabs. <strong>Unwrap</strong> holds the Checker, Select, Unwrap, Constraints and Reshape boxes.</p>
+<figure><img src="../img/uv_bar_unwrap.png" alt="The Unwrap tab of the UV Toolbar" width="671" height="108"></figure>
+<p><strong>Pack</strong> holds the Checker, Texel Density, Pack and Offset boxes.</p>
+<figure><img src="../img/uv_bar_pack.png" alt="The Pack tab of the UV Toolbar" width="941" height="108"></figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select an object with an Unwrap UVW modifier and open <strong>Edit</strong> in the modifier. The toolbar opens by itself under the Edit UVWs window, follows it when you move it, and closes with it.</li>
+<li>Pick the faces you want to work on (or leave nothing selected to work on everything).</li>
+<li>Click <strong>Unwrap</strong> to flatten them, then <strong>Optimize</strong> to reduce stretching. Switch to the <strong>Pack</strong> tab and click <strong>Pack</strong> to lay the islands out in the 0-1 square.</li>
+</ol>
+<p>Without the editor open you can still show the toolbar as a floating window with the <strong>UV Toolbar</strong> macro (category 9000 Toolkit; <kbd>Alt</kbd>+<kbd>S</kbd> by default). Press it again to close it. <!-- CHECK: hotkey from the deploy list --></p>
+<p>Inside the Edit UVWs window, <kbd>U</kbd> unwraps, <kbd>O</kbd> optimizes and <kbd>P</kbd> packs. Outside it those keys keep doing what they did before. <!-- CHECK: default keys set by the installer; user may have declined them --></p>
+
+<h2>Options</h2>
+<h3>Checker</h3>
+<table>
+<tr><th>Control</th><th>What it does</th></tr>
+<tr><td>Checker button</td><td>Puts a checker pattern on the object. Each click shows the next of four checkers. Right-click puts the object's own material back.</td></tr>
+<tr><td>Lit toggle</td><td>Shows the checker without shading.</td></tr>
+<tr><td>Tiles</td><td>How many checker squares across.</td></tr>
+</table>
+
+<h3>Select</h3>
+<table>
+<tr><th>Button</th><th>What it selects</th></tr>
+<tr><td>Flipped</td><td>Flipped (mirrored) faces.</td></tr>
+<tr><td>Overlapping</td><td>Faces that overlap others in UV space.</td></tr>
+<tr><td>Out of tile</td><td>Shells that cross a tile border or sit outside the 0-1 square.</td></tr>
+<tr><td>Density off</td><td>Shells whose texel density is more than 10% away from the rest.</td></tr>
+<tr><td>Similar</td><td>Shells shaped like the selected ones.</td></tr>
+<tr><td>Select marked</td><td>The edges marked with the Constraints buttons.</td></tr>
+</table>
+
+<h3>Unwrap</h3>
+<table>
+<tr><th>Control</th><th>What it does</th></tr>
+<tr><td>Unwrap</td><td>Flattens the selected faces (or all of them).</td></tr>
+<tr><td>Optimize</td><td>Reduces stretching while the islands stay where they are.</td></tr>
+<tr><td>Relax</td><td>Max's own Relax. Right-click opens its settings.</td></tr>
+<tr><td>Align Borders and angle</td><td>Straightens borders that are close to horizontal or vertical, up to the angle you set. It is slower.</td></tr>
+<tr><td>Hard edges from seams</td><td>Makes every UV seam a hard edge and cleans up the smoothing groups. Useful before baking.</td></tr>
+</table>
+
+<h3>Constraints</h3>
+<p>Select edges, then mark them. Unwrap and Optimize keep marked edges straight.</p>
+<table>
+<tr><th>Button</th><th>What it does</th></tr>
+<tr><td>Horizontal / Vertical</td><td>Keeps the selected edges horizontal or vertical.</td></tr>
+<tr><td>Align</td><td>Keeps the selected edges on one straight line.</td></tr>
+<tr><td>Clear marks</td><td>Removes the marks from the selected edges.</td></tr>
+<tr><td>Pin / Unpin</td><td>Pins the selected UVs (Max's own pins). Unwrap and Optimize leave pinned UVs in place.</td></tr>
+</table>
+
+<h3>Reshape</h3>
+<table>
+<tr><th>Button</th><th>What it does</th></tr>
+<tr><td>Rectangularize</td><td>Turns selected quads into a grid of rectangles.</td></tr>
+<tr><td>Rectangularize horizontally / vertically</td><td>The same, with the long side horizontal or vertical.</td></tr>
+<tr><td>Parallelize edges</td><td>Straightens the selected edges so they all lie at one angle.</td></tr>
+</table>
+
+<h3>Texel Density (Pack tab)</h3>
+<table>
+<tr><th>Control</th><th>What it does</th></tr>
+<tr><td>Eyedropper (Get)</td><td>Reads the texel density of the selection into the grey box next to it. Right-click makes it the target.</td></tr>
+<tr><td>Unit</td><td>px/cm, px/m or px/in.</td></tr>
+<tr><td>Texture size</td><td>The usual square sizes, or Custom for a width and height.</td></tr>
+<tr><td>Target</td><td>The density the buttons beside it aim for. It never changes by itself.</td></tr>
+<tr><td>Set</td><td>Scales the selection to the target density.</td></tr>
+<tr><td>-1.5x and -2x</td><td>Sets the selection to the target divided by 1.5 or by 2. A Normalize pack keeps it that way.</td></tr>
+<tr><td>Each Shell</td><td>When on, each shell is scaled on its own.</td></tr>
+</table>
+
+<h3>Pack (Pack tab)</h3>
+<table>
+<tr><th>Control</th><th>What it does</th></tr>
+<tr><td>Pack</td><td>Packs the selected islands, or all of them. <kbd>Esc</kbd> stops it.</td></tr>
+<tr><td>Padding</td><td>Space between islands.</td></tr>
+<tr><td>Rotate</td><td>Islands may turn in steps of this angle (Off for no rotation).</td></tr>
+<tr><td>Scale</td><td>Keep leaves island sizes alone. Normalize gives them all the same texel density first.</td></tr>
+<tr><td>Mix</td><td>How much smaller the biggest islands may get so the others can grow.</td></tr>
+<tr><td>Tries</td><td>How many layouts to try. More is tighter and slower.</td></tr>
+<tr><td>Time</td><td>The search stops after this long.</td></tr>
+<tr><td>Pre-rotate</td><td>Turns each island to its tightest box first.</td></tr>
+<tr><td>Stacks</td><td>Keeps stacked islands together.</td></tr>
+<tr><td>Lock / Unlock / Select locked</td><td>Locked shells stay where they are and Pack lays the rest out around them.</td></tr>
+</table>
+
+<h3>Offset (Pack tab)</h3>
+<p>Moves the selected UVs by whole tiles. Choose a direction (Right, Left, Up, Down) and an amount (1 unit is one tile), then click <strong>Offset</strong>. UVs inside the 0-1 square move out; UVs outside it go back.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>A message line at the top of the strip shows what the last action did.</li>
+<li>When you open the toolbar it checks the selected objects. If some are scaled or mirrored, a warning at the top of the viewport lists them and suggests running Rebuild Mesh first, which bakes the scale or mirror in.</li>
+<li>The toolbar remembers its settings between sessions.</li>
+<li>When you close the Edit UVWs window for good, the checker is taken off the objects. <!-- CHECK: confirm the checker really comes off on every close --></li>
+<li>Locking, unlocking, Optimize, Unwrap and Pack stay fast on models with thousands of islands.</li>
+</ul>
+<figure><img src="../img/uv_warning_box.png" alt="Warning box listing objects that are scaled or mirrored" width="404" height="91"></figure>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

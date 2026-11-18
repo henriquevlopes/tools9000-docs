@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>To Circle - Tools9000 docs</title>
+<meta name="description" content="To Circle: reshape closed edge loops into evenly spaced circles.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / To Circle</div>
+<h1>To Circle</h1>
+<p class="lead">Turn selected loops into round circles, live.</p>
+
+<h2>What it does</h2>
+<p>To Circle takes closed edge loops, or the border of selected polygons, and makes them circles with the number of vertices you choose. It works on Editable Poly and Edit Poly and shows the result while you change the values.</p>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select closed edge loops, or polygons whose border you want round.</li>
+<li>In the right-click menu, choose <strong>To Circle</strong> (in the group with Connect).</li>
+<li>Use the mouse wheel or <kbd>+</kbd> / <kbd>-</kbd> to change the number of segments, or type a number.</li>
+<li>Click, <kbd>Enter</kbd> or <kbd>Space</kbd> keeps it. Right-click or <kbd>Esc</kbd> cancels.</li>
+</ol>
+<figure><img src="../img/to_circle_guide.png" alt="The To Circle box listing the options and their keys" width="418" height="175"></figure>
+
+<h2>Options</h2>
+<p>Each option is a key you press while the tool runs. The box at the top of the viewport shows which are on.</p>
+<table>
+<tr><th>Key</th><th>Option</th><th>What it does</th></tr>
+<tr><td><kbd>K</kbd></td><td>Keep the vertex count</td><td>Keeps the loop's own number of vertices instead of the segments value.</td></tr>
+<tr><td><kbd>F</kbd></td><td>Fit inside the loop</td><td>Makes the circle fit inside the loop rather than around it.</td></tr>
+<tr><td><kbd>S</kbd></td><td>Wheel changes the radius</td><td>The wheel and typed numbers set the radius instead of the segments.</td></tr>
+<tr><td><kbd>R</kbd></td><td>Wheel changes the rotation</td><td>The wheel and typed numbers set the rotation, in degrees.</td></tr>
+</table>
+<p>Ctrl + wheel doubles or halves the value. The viewport can still be moved while the tool runs: middle mouse pans, <kbd>Alt</kbd>+middle orbits, the wheel zooms.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Loops that are open, branching or straight are skipped, and the box tells you how many.</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

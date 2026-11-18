@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edge Flow - Tools9000 docs</title>
+<meta name="description" content="Edge Flow: three live tools that set the shape of a selected edge row.">
+<link rel="stylesheet" href="../style.css">
+<script src="../nav.js"></script>
+<script src="../site.js" defer></script>
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Edge Flow</div>
+<h1>Edge Flow</h1>
+<p class="lead">Set Flow, Set Curve and Set Linear: reshape a row of vertices.</p>
+
+<h2>What it does</h2>
+<p>Three tools reshape a selected row of vertices or edges without changing how it is connected. Only positions move.</p>
+<ul>
+<li><strong>Set Flow</strong> makes the row follow the surface around it.</li>
+<li><strong>Set Curve</strong> turns the row into a curve between its two ends.</li>
+<li><strong>Set Linear</strong> makes the row straight between its two ends.</li>
+</ul>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the vertices, edges or borders you want to change (a row of them).</li>
+<li>In the right-click menu, choose <strong>Set Flow</strong>, <strong>Set Curve</strong> or <strong>Set Linear</strong> (it is in the group with Connect). It only shows at vertex, edge and border level.</li>
+<li>Flow and Curve have a Tension value: use the mouse wheel or <kbd>+</kbd> / <kbd>-</kbd> (0.1 a step), or type a number. Set Linear has no value to change.</li>
+<li>Click, <kbd>Enter</kbd> or <kbd>Space</kbd> keeps it. Right-click or <kbd>Esc</kbd> cancels.</li>
+</ol>
+<figure><img src="../img/set_flow_guide.png" alt="The Set Flow box showing the Tension value" width="330" height="103"></figure>
+<figure><img src="../img/set_curve_guide.png" alt="The Set Curve box showing the Tension value" width="330" height="103"></figure>
+<figure><img src="../img/set_linear_guide.png" alt="The Set Linear box with the Evenly spaced option" width="315" height="92"></figure>
+
+<h2>Options</h2>
+<table>
+<tr><th>Key</th><th>Option</th><th>What it does</th></tr>
+<tr><td><kbd>E</kbd></td><td>Evenly spaced (Set Linear)</td><td>Spreads the vertices at equal distances along the straight line.</td></tr>
+</table>
+<p>Ctrl + wheel changes Tension by 0.5. The viewport can still be moved while the tool runs: middle mouse pans, <kbd>Alt</kbd>+middle orbits, the wheel zooms.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Set Flow skips rows that do not have polygons on both sides. Set Curve and Set Linear skip rows that are closed or too short. The box tells you how many were skipped.</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>
