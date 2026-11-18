@@ -39,6 +39,11 @@
 <p>The Edge Marks pie sets hard edges, creases and edge weights on the selected edges. At polygon level, <strong>Make Hard</strong> turns the outline of the selection into a hard edge using one clean smoothing group that no neighbour uses, so groups do not pile up. <strong>Hard per Face</strong> gives each polygon its own group. Both are a single undo step. <!-- CHECK: Edge Marks may have its own page; link or trim if so --></p>
 <p>Hard edges are also what <strong>Hard edges from seams</strong> in the UV Toolbar creates: a hard edge on every UV seam, handy before baking.</p>
 
+<div class="gallery" style="grid-template-columns:1fr">
+<figure><img src="../img/smoothing_optimize.png" alt="A box whose polygons carry many different smoothing groups, before and after Optimize" width="996" height="397" loading="lazy"><figcaption>Colors and Optimize: a box with messy groups (24 groups in all) shown with Colors on, then rebuilt by Optimize into 3 groups. Every hard and soft edge stays exactly as it was.</figcaption></figure>
+<figure><img src="../img/smoothing_make-hard.png" alt="A box with one group, then the top made hard, then every polygon hard" width="998" height="265" loading="lazy"><figcaption>Make Hard and Hard per Face (Edge Marks pie, polygon level), seen with Colors on: one group for the whole box; the top four polygons selected and Make Hard (the top gets its own group); all polygons selected and Hard per Face (each polygon its own group).</figcaption></figure>
+</div>
+
 <h2>Good to know</h2>
 <ul>
 <li>Turning Colors on or off is one undo step. The colours are removed before you save, so the .max file never keeps them.</li>

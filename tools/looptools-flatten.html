@@ -20,7 +20,10 @@
 <h2>What it does</h2>
 <p>Flatten takes each connected patch of your selection and moves its vertices onto one plane. You choose which plane to use, whether to keep some directions fixed, and how far the vertices are pulled towards the plane.</p>
 
-<div class="gif-todo">Select a bumpy patch and run Flatten: it presses flat onto the plane.</div>
+<figure>
+<img src="../img/looptools-flatten_result.png" alt="A very bumpy patch pressed flat." width="1000" height="426">
+<figcaption>A very bumpy patch, before and after Flatten.</figcaption>
+</figure>
 <h2>How to use it</h2>
 <ol>
 <li>Open an Editable Poly (or an Edit Poly modifier) in the Modify panel and go to a sub-object level. Select faces, edges or vertices.</li>
@@ -36,6 +39,11 @@
 <tr><td>Lock X / Y / Z</td><td>Stops vertices moving along that axis.</td></tr>
 <tr><td>Influence</td><td>How far vertices are pulled onto the plane. 100 puts them fully on it, lower values go part of the way.</td></tr>
 </table>
+
+<div class="gallery">
+<figure><img src="../img/looptools-flatten_influence.png" alt="A bumpy patch flattened at 25, 50 and 100 percent influence." width="1000" height="848"><figcaption>Influence: 25, 50 and 100 %.</figcaption></figure>
+<figure><img src="../img/looptools-flatten_plane.png" alt="A dome flattened onto the Best fit plane and onto the View plane." width="1000" height="293"><figcaption>Plane: Best fit and View (the plane faces the camera).</figcaption></figure>
+</div>
 
 <h2>Good to know</h2>
 <ul>

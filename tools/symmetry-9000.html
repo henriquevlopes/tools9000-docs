@@ -63,6 +63,13 @@
 <tr><td>Offset Mirror UVs</td><td>Moves the mirrored side's UVs one tile over in U, so the two sides do not overlap.</td></tr>
 </table>
 
+<div class="gallery" style="grid-template-columns:1fr">
+<figure><img src="../img/symmetry-9000_axes.png" alt="The same shape mirrored over one, two and three axes" width="998" height="265" loading="lazy"><figcaption>X, Y, Z: one object mirrored on X (2 copies), X + Y (4 copies) and X + Y + Z (8 copies). Planar mode, Slice and Weld off.</figcaption></figure>
+<figure><img src="../img/symmetry-9000_radial.png" alt="An arm repeated round an axis three times, six times, and six times with each copy also mirrored" width="998" height="265" loading="lazy"><figcaption>Radial mode, Z axis: Count 3, Count 6, and Count 6 with Mirror Symmetry on (each copy is also mirrored).</figcaption></figure>
+<figure><img src="../img/symmetry-9000_material-id.png" alt="The mirrored side shown in a different colour because it got a different material ID" width="996" height="397" loading="lazy"><figcaption>Tag Mirrored Faces (Selection rollout): off, then on with New ID 3. The ID 1 faces are orange and the ID 3 faces are blue.</figcaption></figure>
+<figure><img src="../img/symmetry-9000_uv-offset.png" alt="The UV layout of a mirrored box, with and without Offset Mirror UVs" width="964" height="300" loading="lazy"><figcaption>Offset Mirror UVs (Advanced rollout): off, the mirrored side lies on top of the source in the same UV tile (orange); on, it moves one tile over in U (blue). Drawn from the object’s UV channel 1.</figcaption></figure>
+</div>
+
 <h2>Good to know</h2>
 <ul>
 <li>Smoothing groups and hard edges come out the same on both sides, including FBX imports with locked normals.</li>

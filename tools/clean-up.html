@@ -41,6 +41,11 @@
 <tr><td>Polygon, element</td><td>Flips inward-facing polygons outward. Nothing is removed.</td></tr>
 </table>
 
+<div class="gallery" style="grid-template-columns:1fr">
+<figure><img src="../img/clean-up_edge-level.png" alt="Two planes touching along a doubled seam at edge level, before and after Clean Up" width="996" height="397" loading="lazy"><figcaption>Edge level: two planes whose seam edge is doubled (vertices on top of each other). Clean Up welds the seam, so only the outer open edges stay selected. Vertex and border level do the same job.</figcaption></figure>
+<figure><img src="../img/clean-up_element-level.png" alt="A sphere turned inward and a box, before and after Clean Up at polygon level" width="996" height="397" loading="lazy"><figcaption>Polygon level, everything selected: the sphere that was facing inward is turned outward (72 polygons flipped); the box already faced out and is left alone.</figcaption></figure>
+</div>
+
 <h2>Good to know</h2>
 <ul>
 <li>Outside a sub-object level, <kbd>3</kbd> does what it did in Max before (switches to sub-object level 3).</li>

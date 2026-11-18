@@ -18,14 +18,11 @@
 
 <h2>What it does</h2>
 <p>The Align pie moves things into line. It picks what to move for you: the selected vertices when you edit a poly (edges and polygons use their vertices), the selected knots on a spline, the selected UVs in the Unwrap UVW editor, and otherwise the pivots of the selected objects.</p>
-<figure>
-<img src="../img/align_pie_objects.png" alt="The Align pie for objects, with X Y Z buttons on the rows" width="560" height="308">
-<figcaption>The pie on objects and vertices.</figcaption>
-</figure>
-<figure>
-<img src="../img/align_pie_uvs.png" alt="The Align pie in the UV editor, with U and V buttons" width="564" height="308">
-<figcaption>In the Unwrap UVW editor the rows use U and V.</figcaption>
-</figure>
+<div class="gallery">
+<figure><img src="../img/align_pie_verts.png" alt="The Align pie when editing a poly: Flatten, To Surface, Nudge and the X Y Z rows" width="553" height="308"><figcaption>Editing a poly: vertices move. Flatten and To Surface sit on the left.</figcaption></figure>
+<figure><img src="../img/align_pie_objects.png" alt="The Align pie for objects, with Space and X Y Z buttons" width="560" height="308"><figcaption>On objects: Space (equal gaps) replaces Flatten and To Surface.</figcaption></figure>
+<figure><img src="../img/align_pie_uvs.png" alt="The Align pie in the UV editor, with U and V buttons" width="564" height="308"><figcaption>In the Unwrap UVW editor the rows use U and V.</figcaption></figure>
+</div>
 
 <div class="gif-todo">Open the pie, flick Flatten, then use Nudge steps on a few vertices.</div>
 <h2>How to use it</h2>
@@ -44,6 +41,7 @@
 <tr><td>Zero X Y Z</td><td>Moves everything to zero on the axis you click.</td></tr>
 <tr><td>Space X Y Z</td><td>Objects: equal gaps between three or more objects; the two outer ones stay.</td></tr>
 <tr><td>Flatten</td><td>Vertices and UVs: flattens the selection, then opens a live tool (see below). A row of edges is straightened.</td></tr>
+<tr><td>To Surface</td><td>Poly vertices only: slides the selected vertices along an edge or an axis until they lie on the plane of a face you point at (or on the real surface of the object). It opens a live tool; see <a href="to-surface.html">To Surface</a> for its keys.</td></tr>
 <tr><td>Nudge</td><td>Click a step size to move the selection by that step. Steps in the UV editor are 0.001, 0.01, 0.05 and 0.1.<!-- CHECK: how the nudge move itself is driven (a separate tool opens after clicking the step) --></td></tr>
 <tr><td>Space U V (UVs)</td><td>Equal gaps between the selected UV islands. Pinned UVs stay put.</td></tr>
 </table>
