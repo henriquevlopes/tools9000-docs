@@ -87,4 +87,33 @@
     });
     document.body.classList.add("menu-open");
   });
+
+  /* small dialog pictures: show at 2x so they are readable */
+  window.addEventListener("load", function () {
+    document.querySelectorAll("main figure img").forEach(function (i) {
+      var w = i.naturalWidth;
+      if (w >= 120 && w <= 440 && i.naturalHeight <= 420 && !i.closest(".gallery")) i.style.width = Math.min(w * 2, 760) + "px";
+    });
+  });
+  /* galleries of small pictures keep several columns */
+  window.addEventListener("load", function () {
+    document.querySelectorAll(".gallery").forEach(function (g) {
+      var imgs = g.querySelectorAll("img"), small = imgs.length > 0;
+      imgs.forEach(function (i) { if (i.naturalWidth > 600) small = false; });
+      if (small) g.classList.add("small");
+    });
+  });
+  /* lightbox */
+  var lb = document.createElement("div"); lb.id = "lb"; lb.innerHTML = '<small>Click or Esc to close</small><img alt="">';
+  document.body.appendChild(lb);
+  function closeLb() { lb.classList.remove("on"); document.body.style.overflow = ""; }
+  lb.addEventListener("click", closeLb);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLb(); });
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    if (t.tagName === "IMG" && t.closest("main")) {
+      var im = lb.querySelector("img"); im.src = t.src; im.alt = t.alt;
+      lb.classList.add("on"); lb.scrollTop = 0; document.body.style.overflow = "hidden";
+    }
+  });
 })();

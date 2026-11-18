@@ -3,7 +3,7 @@
   --bg:#262729;--bg2:#2f3134;--fg:#e4e6ea;--mute:#9a9fa8;--line:#3d4044;
   --accent:#4b9cff;--accent-fg:#0d1624;--accent-soft:#223449;--accent2:#e8923a;--code:#1f2022;
   --shadow:0 1px 2px rgba(0,0,0,.35),0 8px 24px rgba(0,0,0,.28);
-  --side-w:272px;--content-w:780px;--top-h:60px;--r:8px;color-scheme:dark
+  --side-w:272px;--content-w:900px;--top-h:60px;--r:8px;color-scheme:dark
 }
 :root[data-theme="light"]{
   --bg:#f4f5f7;--bg2:#ffffff;--fg:#1d2026;--mute:#5d6470;--line:#dcdfe5;
@@ -107,7 +107,16 @@ footer{border-top:1px solid var(--line);padding:20px;color:var(--mute);font-size
 body.show-gifs .gif-todo{display:block}
 
 /* picture galleries: several results side by side */
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:18px 0}
+.gallery{display:grid;grid-template-columns:1fr;gap:22px;margin:18px 0}
+.gallery.small{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
 .gallery figure{margin:0}
 .gallery img{margin:0 0 6px}
 .gallery figcaption{margin:0;font-size:.88rem;color:var(--mute)}
+
+/* click a picture to see it full size */
+main img{cursor:zoom-in}
+#lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.88);overflow:auto;display:none;cursor:zoom-out;padding:24px}
+#lb.on{display:block}
+#lb img{max-width:none;width:auto;height:auto;margin:0 auto;border:0;box-shadow:none;cursor:zoom-out;background:none}
+#lb.fit img{max-width:100%}
+#lb small{position:fixed;top:12px;right:18px;color:#ccc;font-size:.85rem}
