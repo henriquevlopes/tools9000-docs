@@ -18,11 +18,14 @@
 
 <h2>What it does</h2>
 <p>Clean Up works on the Editable Poly or Edit Poly you are editing, at any sub-object level. It is one undo step, and a box at the top of the viewport tells you what it did.</p>
+<figure>
+<img src="../img/clean-up_result.png" alt="A box with two flipped polygons before and after Clean Up" width="996" height="397">
+<figcaption>Two polygons facing inward on a box, before and after Clean Up.</figcaption>
+</figure>
 <p>At <strong>vertex, edge or border</strong> level it cleans the vertices: it welds vertices that sit on top of each other, removes loose vertices, and removes vertices sitting in the middle of a straight edge. Then it selects the open edges (at vertex level, their vertices). It never flips a polygon at these levels.</p>
-<figure><img src="../img/cleanup_box.png" alt="Result box: removed 1 vertex, 8 open edges selected" width="223" height="56"><figcaption>The result box after a vertex clean.</figcaption></figure>
 <p>At <strong>polygon or element</strong> level it only turns polygons that face inward back outward, and removes nothing.</p>
-<figure><img src="../img/cleanup_polys_box.png" alt="Result box after flipping polygons" width="104" height="56"></figure>
 
+<div class="gif-todo">Press 3 at vertex level, then at polygon level on a box with flipped polygons.</div>
 <h2>How to use it</h2>
 <ol>
 <li>Select the object and go to the Modify panel, then to a sub-object level.</li>

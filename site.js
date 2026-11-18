@@ -5,6 +5,8 @@
   var here = location.pathname.replace(/\/index\.html$/, "/");
   function url(slug) { return base + (slug === "index" ? "" : "tools/" + slug + ".html"); }
 
+  if (/[?&]gifs/.test(location.search)) document.body.classList.add("show-gifs");
+
   /* theme */
   var saved = null;
   try { saved = localStorage.getItem("t9k-theme"); } catch (e) {}
