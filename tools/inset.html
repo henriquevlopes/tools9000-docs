@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inset - Tools9000 docs</title>
+<meta name="description" content="Inset 9000: a live inset of the selected polygons with options you switch on the keyboard.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Inset</div>
+<h1>Inset</h1>
+<p class="lead">A live inset of the selected polygons. Move the mouse, type a number, press a key.</p>
+
+<h2>What it does</h2>
+<p>Inset 9000 insets the selected polygons and shows the result while you drag. It works on Editable Poly and Edit Poly, at polygon or element level.</p>
+<figure>
+<img src="../img/inset_depth_new.png" alt="A group of polygons inset and pushed in depth" width="1080">
+<figcaption>An inset with Depth switched on.</figcaption>
+</figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select polygons.</li>
+<li>In the right-click menu, choose <strong>Inset 9000</strong> (it sits after Max's Inset). It only shows at polygon and element level.</li>
+<li>Move the mouse toward the middle for a thicker inset, or type a number.</li>
+<li>Click, <kbd>Enter</kbd> or <kbd>Space</kbd> keeps it. Right-click or <kbd>Esc</kbd> cancels.</li>
+</ol>
+<figure><img src="../img/inset_guide.png" alt="Inset box listing the options and their keys" width="450"></figure>
+
+<h2>Options</h2>
+<p>Each option is a key you can press while the tool is running. The box at the top of the viewport shows which are on.</p>
+<table>
+<tr><th>Key</th><th>Option</th><th>What it does</th></tr>
+<tr><td><kbd>I</kbd></td><td>Individual polygons</td><td>Insets each polygon on its own instead of the group.</td></tr>
+<tr><td><kbd>E</kbd></td><td>Even thickness</td><td>Keeps the thickness the same all round (on by default).</td></tr>
+<tr><td><kbd>R</kbd></td><td>Relative to polygon size</td><td>Thickness is a share of each polygon's size.</td></tr>
+<tr><td><kbd>L</kbd></td><td>Edge rail</td><td>Slides the new edges along the existing edges.</td></tr>
+<tr><td><kbd>B</kbd></td><td>Boundary</td><td>Moves open (border) edges too (on by default).</td></tr>
+<tr><td><kbd>O</kbd></td><td>Outset</td><td>Grows outward instead of inward.</td></tr>
+<tr><td><kbd>C</kbd></td><td>Clamp</td><td>Stops before the inset folds over itself (on by default).</td></tr>
+<tr><td><kbd>D</kbd></td><td>Depth (in / out)</td><td>Also moves the inset polygons along the normal.</td></tr>
+</table>
+<p>While dragging: <kbd>Ctrl</kbd> sets depth, <kbd>Shift</kbd> slows the movement. Middle mouse pans, <kbd>Alt</kbd>+middle orbits, the wheel zooms.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>It stays fast on big selections: 900 polygons on a 100k-polygon mesh inset in under a second.</li>
+<li>Undo is one step.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

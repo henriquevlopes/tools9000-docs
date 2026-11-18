@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mirror - Tools9000 docs</title>
+<meta name="description" content="Mirror: one click sets up a live Symmetry 9000 modifier on the selected objects.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Mirror</div>
+<h1>Mirror</h1>
+<p class="lead">One click sets up a live mirror. It stays editable, so you can change it any time.</p>
+
+<h2>What it does</h2>
+<p>Mirror puts the <strong>Symmetry 9000</strong> modifier on the selected objects, already set up. Because it is a modifier, the mirror stays live: edit the source side and the other side follows.</p>
+<figure><img src="../img/mirror_box.png" alt="The Mirror box shown at the top of the viewport" width="299"></figure>
+
+<h2>How to use it</h2>
+<p>Open the quad menu (the Q menu) and choose <strong>Mirror</strong> in its Scripts part.</p>
+<table>
+<tr><th>Situation</th><th>Result</th></tr>
+<tr><td>Nothing selected in sub-object mode</td><td>The whole object mirrors on its pivot.</td></tr>
+<tr><td>Polygons selected</td><td>Only those polygons mirror.</td></tr>
+<tr><td>Shift+click, or <strong>Mirror to Object</strong></td><td>You pick another object as the centre. The mirror follows it when it moves.</td></tr>
+</table>
+<figure><img src="../img/mirror_guide.png" alt="Instructions box while picking the object the mirror plane follows" width="278"></figure>
+<p>When you pick an object, left-click it. Right-click or <kbd>Esc</kbd> cancels.</p>
+
+<h2>Options</h2>
+<p>Everything is in the Symmetry 9000 modifier panel:</p>
+<ul>
+<li>A different <strong>material ID</strong> for the mirrored side.</li>
+<li>A <strong>UV offset</strong> for the mirrored side.</li>
+<li><strong>Pivot</strong> and <strong>Middle</strong> buttons to set the centre.</li>
+</ul>
+
+<h2>Good to know</h2>
+<ul>
+<li>Smoothing groups and hard edges come out the same on both sides, including FBX imports with locked normals.</li>
+<li>An object whose mirror plane follows another object can be used as a Boolean operand.</li>
+<li>A source that already uses nearly all 32 smoothing groups leaves no free group to keep a centre edge hard.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>

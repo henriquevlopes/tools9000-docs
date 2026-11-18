@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Knife Project - Tools9000 docs</title>
+<meta name="description" content="Knife Project cuts the outline of shapes into a poly object as seen from the view.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Tools9000 docs</a><nav><a href="../index.html#tools">Tools</a></nav></div></header>
+<main>
+<div class="crumbs"><a href="../index.html">Tools</a> / Knife Project</div>
+<h1>Knife Project</h1>
+<p class="lead">Cut the outline of a shape into a mesh, exactly as you see it from the current view.</p>
+
+<h2>What it does</h2>
+<p>The selected shapes (splines) are projected onto an Editable Poly or Edit Poly from the view you are looking through. Their outline is cut into the mesh and the polygons inside are selected.</p>
+<figure>
+<img src="../img/knife_sphere_persp.png" alt="A circle over a sphere before the cut, and the polygons inside the circle selected after the cut" width="1288">
+<figcaption>A circle over a sphere, in a perspective view. Left: before. Right: after Knife Project, with the inside polygons selected.</figcaption>
+</figure>
+
+<h2>How to use it</h2>
+<ol>
+<li>Select the mesh and the shapes, and look at the mesh from the view you want to cut from.</li>
+<li>In the right-click menu, choose <strong>Knife Project</strong> (it sits after Max's Cut).</li>
+<li>If no shape was selected, the tool asks you to pick them: left-click each shape, then right-click to cut.</li>
+</ol>
+<figure><img src="../img/knife_guide.png" alt="Instructions box shown while picking shapes" width="190"></figure>
+<p>The box at the top of the viewport tells you what to do: <strong>left-click</strong> picks another shape, <strong>right-click</strong> cuts, <kbd>Esc</kbd> cancels. Picked shapes turn bright green and their names are listed. Right-click with nothing picked, or <kbd>Esc</kbd>, cuts nothing.</p>
+
+<h2>Through cuts</h2>
+<p>Normally only the polygons you can see are cut. To also cut polygons that face away or hide behind others, <kbd>Shift</kbd>+click the menu item, or choose <strong>Knife Project Through</strong>.</p>
+
+<h2>Good to know</h2>
+<ul>
+<li>Works on Editable Poly and Edit Poly.</li>
+<li>Open splines work too.</li>
+<li>The result depends on the view: change the view and the cut lands elsewhere.</li>
+</ul>
+</main>
+<footer>Tools9000 by Henrique Lopes.</footer>
+</body>
+</html>
